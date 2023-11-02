@@ -13,12 +13,19 @@
 	</head>
 	<body>
 		<header class="header">
-			<div class="header__panel">
-				<div class="container">
+			<div class="container">
+				<div class="header__panel">
 					<div class="header__panel-inner">
+						<button class="header__burgerOpen"><img src="images/menu.svg" alt="burgerMenu" /></button>
 						<div class="header__logo">
 							<img src="images/logo.svg" alt="logo" />
 						</div>
+						<button class="header__catalogBtn">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="#822A27" />
+							</svg>
+							<span>каталог</span>
+						</button>
 						<div class="header__search">
 							<input type="text" />
 							<button>
@@ -26,30 +33,74 @@
 							</button>
 						</div>
 						<div class="header__bar">
-							<a href="#">
-								<img src="images/account.svg" alt="" />
+							<a class="header__account" href="#">
+								<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_1_258)">
+										<mask id="mask0_1_258" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="25">
+											<path d="M0 7.24792e-05H24.9999V25H0V7.24792e-05Z" fill="white" />
+										</mask>
+										<g mask="url(#mask0_1_258)">
+											<path d="M6.25 7.22658C6.25 3.77483 9.04823 0.976599 12.5 0.976599C15.9517 0.976599 18.75 3.77483 18.75 7.22658C18.75 10.6783 15.9517 13.4766 12.5 13.4766C9.04823 13.4766 6.25 10.6783 6.25 7.22658Z" stroke="#82888E" stroke-width="1.7" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M24.0234 20.2637C24.0234 18.8632 23.4245 17.5277 22.3723 16.6032C21.0815 15.5532 17.2999 13.4579 12.5 13.4766C7.65799 13.4766 4.40902 15.0381 2.62758 16.6032C1.57544 17.5277 0.976562 18.8632 0.976562 20.2637V22.0703C0.976562 23.149 1.85102 24.0234 2.92968 24.0234H22.0703C23.149 24.0234 24.0234 23.149 24.0234 22.0703V20.2637Z" stroke="#82888E" stroke-width="1.7" stroke-miterlimit="10" stroke-linecap="round" />
+										</g>
+									</g>
+									<defs>
+										<clipPath id="clip0_1_258">
+											<rect width="25" height="25" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
 								<span>Войти</span>
 							</a>
-							<a href="#">
-								<img src="images/delivvery.svg" alt="" />
+							<a class="header__delivery" href="#">
+								<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_1_237)">
+										<path d="M24.3294 5.32044C24.3294 5.16536 24.2833 5.01379 24.1969 4.88497C24.1106 4.75615 23.9879 4.6559 23.8444 4.59696L12.7972 0.0586596C12.6068 -0.0195532 12.3932 -0.0195532 12.2028 0.0586596L1.15558 4.59696C1.01214 4.65589 0.889443 4.75614 0.803098 4.88496C0.716753 5.01378 0.670652 5.16536 0.670654 5.32044V19.6796C0.670652 19.8346 0.716753 19.9862 0.803098 20.115C0.889443 20.2439 1.01214 20.3441 1.15558 20.403L12.2028 24.9413C12.3929 25.0196 12.6062 25.0195 12.7963 24.9413C12.8057 24.9382 12.3874 25.1097 23.8444 20.403C23.9879 20.3441 24.1106 20.2439 24.1969 20.115C24.2833 19.9862 24.3294 19.8346 24.3294 19.6796V5.32044ZM12.5 9.07894L8.42953 7.40677L17.2263 3.56932L21.569 5.35334L12.5 9.07894ZM2.23494 6.5531L5.74683 7.99582V12.0661C5.74683 12.498 6.09703 12.8482 6.52897 12.8482C6.96091 12.8482 7.31112 12.498 7.31112 12.0661V8.63845L11.7179 10.4488V23.0509L2.23494 19.1553V6.5531ZM12.5 1.62769L15.2114 2.74156L6.41468 6.57901L3.43104 5.35329L12.5 1.62769ZM13.2822 10.4488L22.7651 6.5531V19.1553L13.2822 23.0509V10.4488Z" fill="#82888E" />
+									</g>
+									<defs>
+										<clipPath id="clip0_1_237">
+											<rect width="25" height="25" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
 								<span>Доставка</span>
 							</a>
-							<a href="#">
-								<img src="images/payment.svg" alt="" />
+							<a class="header__payment" href="#">
+								<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M24.9584 14.1663L23.0607 3.40376C22.8028 1.94149 21.4031 0.961535 19.9411 1.21941L3.66492 4.08941C2.20261 4.34723 1.2227 5.74664 1.48053 7.2089L1.61997 7.99982C0.667632 8.41525 0 9.36544 0 10.4691V21.1288C0 22.6136 1.20801 23.8216 2.69285 23.8216H18.85C20.3348 23.8216 21.5428 22.6136 21.5428 21.1288V17.5028L22.774 17.2858C23.4824 17.1609 24.0997 16.7676 24.5122 16.1784C24.9248 15.5892 25.0833 14.8745 24.9584 14.1663ZM23.3091 15.3359C23.1216 15.6037 22.8409 15.7825 22.519 15.8393L21.5428 16.0113V10.4691C21.5428 8.98423 20.3348 7.77621 18.85 7.77621H3.0721L2.92708 6.95382C2.87029 6.63185 2.94236 6.30704 3.12988 6.03918C3.3174 5.77136 3.59804 5.59261 3.92001 5.53581L20.1962 2.66587C20.2666 2.65343 20.3379 2.64717 20.4094 2.64716C20.9918 2.64716 21.5097 3.06568 21.6142 3.65875L23.5119 14.4212C23.5686 14.7433 23.4966 15.0681 23.3091 15.3359ZM18.85 22.3528H2.69285C2.01793 22.3528 1.46883 21.8037 1.46883 21.1288V15.9086H20.074V21.1287C20.074 21.8037 19.5249 22.3528 18.85 22.3528ZM2.69285 9.24509H18.85C19.5249 9.24509 20.074 9.79419 20.074 10.4691V11.1081H1.46883V10.4691C1.46883 9.79419 2.01793 9.24509 2.69285 9.24509ZM20.074 12.5769V14.4398H1.46883V12.5769H20.074Z" fill="#82888E" />
+									<path d="M7.06761 19.4033H3.73582C3.33023 19.4033 3.0014 19.7321 3.0014 20.1377C3.0014 20.5433 3.33023 20.8721 3.73582 20.8721H7.06761C7.4732 20.8721 7.80202 20.5433 7.80202 20.1377C7.80202 19.7321 7.4732 19.4033 7.06761 19.4033Z" fill="#82888E" />
+								</svg>
 								<span>Оплата</span>
 							</a>
-							<a href="#">
-								<img src="images/cart.svg" alt="" />
+							<a class="" href="#">
+								<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_150_1417)">
+										<mask id="mask0_150_1417" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="25">
+											<path d="M0 7.24792e-05H24.9999V25H0V7.24792e-05Z" fill="white" />
+										</mask>
+										<g mask="url(#mask0_150_1417)">
+											<path d="M22.7538 11.0352V19.8242C22.7538 21.4422 21.4422 22.7539 19.8242 22.7539H5.17577C3.55776 22.7539 2.24609 21.4422 2.24609 19.8242V11.0352" stroke="#82888E" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M11.0351 2.24611L5.17578 8.10547" stroke="#82888E" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M24.2675 11.0352H0.732422V8.10548H24.2675V11.0352Z" stroke="#82888E" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M12.5 13.9649V19.8242" stroke="#82888E" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M6 14V19.8594" stroke="#82888E" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M18.3593 13.9649V19.8242" stroke="#82888E" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M19.8242 8.10547L13.9648 2.24611" stroke="#82888E" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+										</g>
+									</g>
+									<defs>
+										<clipPath id="clip0_150_1417">
+											<rect width="25" height="25" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
 								<span>Корзина</span>
 							</a>
 						</div>
 					</div>
 				</div>
-			</div>
-			<nav class="header__nav">
-				<div class="container">
+				<nav class="header__nav">
 					<div class="header__nav-inner">
-						<button class="header__catalogBtn"><img src="images/menu.svg" alt="menu" /><span>каталог</span></button>
 						<ul class="header__menu">
 							<li><a href="#">ЭЛИТНЫЕ СЫРЫ </a></li>
 							<li><a href="#">МЯСНАЯ ГАСТРОНОМИЯ</a></li>
@@ -60,618 +111,10 @@
 							<li><a href="#">ПОДАРКИ И НАБОРЫ</a></li>
 						</ul>
 					</div>
-				</div>
-			</nav>
+				</nav>
+			</div>
 		</header>
-		<section class="stock">
-			<div class="container">
-				<div class="goods__inner">
-					<div class="goods__panel">
-						<h2 class="goods__title">Акции и спецпредложения</h2>
-						<div class="goods__seemore">
-							<a href="#">Смотреть все</a>
-							<div class="goods__seemore-arrows">
-								<button><img src="images/see-left.svg" alt="see-left" /></button>
-								<button><img src="images/see-right.svg" alt="see-right" /></button>
-							</div>
-						</div>
-					</div>
-					<div class="goods__list">
-						<div class="swiperGoods swiper">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<div class="goods__card">
-										<img class="goods__image" src="images/goods/stock1.jpg" alt="stock1" />
-										<div class="goods__content">
-											<div class="goods__reviews">
-												<div class="goods__stars">
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-												</div>
-												<span class="goods__stars-count">(1)</span>
-											</div>
-											<div class="goods__info">
-												<h5 class="goods__card-title">Сыр Халуми сливочный</h5>
-												<span class="goods__brand">от Маргариты Сафоновой</span>
-												<p class="goods__desc">Традиционный сыр для халуми сливочный для жарки, изготавливается с малым количеством соли</p>
-											</div>
-											<div class="goods__bottom">
-												<div class="goods__price">
-													<div class="goods__price-left"><span class="goods__newPrice">7500</span> ₽/шт.</div>
-													<div class="goods__price-right">
-														<span class="goods__sale">-25%</span>
-														<span class="goods__oldPrice">10 000 ₽</span>
-													</div>
-												</div>
-												<button class="goods__btn">
-													<img src="images/but-cart.svg" alt="addCart" />
-													В корзину
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="goods__card">
-										<img class="goods__image" src="images/goods/stock2.jpg" alt="stock2" />
-										<div class="goods__content">
-											<div class="goods__reviews">
-												<div class="goods__stars">
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-												</div>
-												<span class="goods__stars-count">(1)</span>
-											</div>
-											<div class="goods__info">
-												<h5 class="goods__card-title">Сыр Халуми сливочный для жарки пикантный</h5>
-												<span class="goods__brand">от Маргариты Сафоновой</span>
-												<p class="goods__desc">Традиционный сыр для халуми сливочный для жарки, изготавливается</p>
-											</div>
-											<div class="goods__bottom">
-												<div class="goods__price">
-													<div class="goods__price-left"><span class="goods__newPrice">7500</span> ₽/шт.</div>
-													<div class="goods__price-right">
-														<span class="goods__sale">-25%</span>
-														<span class="goods__oldPrice">10 000 ₽</span>
-													</div>
-												</div>
-												<button class="goods__btn">
-													<img src="images/but-cart.svg" alt="addCart" />
-													В корзину
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="goods__card">
-										<img class="goods__image" src="images/goods/stock3.jpg" alt="stock3" />
-										<div class="goods__content">
-											<div class="goods__reviews">
-												<div class="goods__stars">
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-												</div>
-												<span class="goods__stars-count">(1)</span>
-											</div>
-											<div class="goods__info">
-												<h5 class="goods__card-title">Сыр Халуми сливочный для жарки</h5>
-												<span class="goods__brand">от Маргариты Сафоновой по страрому рецепту</span>
-												<p class="goods__desc">Традиционный сыр для халуми сливочный для жарки, изготавливается</p>
-											</div>
-											<div class="goods__bottom">
-												<div class="goods__price">
-													<div class="goods__price-left"><span class="goods__newPrice">7500</span> ₽/шт.</div>
-													<div class="goods__price-right">
-														<span class="goods__sale">-25%</span>
-														<span class="goods__oldPrice">10 000 ₽</span>
-													</div>
-												</div>
-												<button class="goods__btn">
-													<img src="images/but-cart.svg" alt="addCart" />
-													В корзину
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="goods__card">
-										<img class="goods__image" src="images/goods/stock4.jpg" alt="stock4" />
-										<div class="goods__content">
-											<div class="goods__reviews">
-												<div class="goods__stars">
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-												</div>
-												<span class="goods__stars-count">(1)</span>
-											</div>
-											<div class="goods__info">
-												<h5 class="goods__card-title">Сыр Халуми сливочный для жарки пикантный с ароматом запеченного</h5>
-												<span class="goods__brand">от Маргариты Сафоновой по страрому рецепту</span>
-												<p class="goods__desc">Традиционный сыр для халуми</p>
-											</div>
-											<div class="goods__bottom">
-												<div class="goods__price">
-													<div class="goods__price-left"><span class="goods__newPrice">7500</span> ₽/шт.</div>
-													<div class="goods__price-right">
-														<span class="goods__sale">-25%</span>
-														<span class="goods__oldPrice">10 000 ₽</span>
-													</div>
-												</div>
-												<button class="goods__btn">
-													<img src="images/but-cart.svg" alt="addCart" />
-													В корзину
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- <div class="swiper-button-prev"></div>
-							<div class="swiper-button-next"></div> -->
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="hits">
-			<div class="container">
-				<div class="goods__inner">
-					<div class="goods__panel">
-						<h2 class="goods__title">Хиты продаж</h2>
-						<div class="goods__seemore">
-							<a href="#">Смотреть все</a>
-							<div class="goods__seemore-arrows">
-								<button><img src="images/see-left.svg" alt="see-left" /></button>
-								<button><img src="images/see-right.svg" alt="see-right" /></button>
-							</div>
-						</div>
-					</div>
-					<div class="goods__list">
-						<div class="swiperGoods swiper">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<div class="goods__card">
-										<img class="goods__image" src="images/goods/stock1.jpg" alt="stock1" />
-										<div class="goods__content">
-											<div class="goods__reviews">
-												<div class="goods__stars">
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-												</div>
-												<span class="goods__stars-count">(1)</span>
-											</div>
-											<div class="goods__info">
-												<h5 class="goods__card-title">Сыр Халуми сливочный</h5>
-												<span class="goods__brand">от Маргариты Сафоновой</span>
-												<p class="goods__desc">Традиционный сыр для халуми сливочный для жарки, изготавливается с малым количеством соли</p>
-											</div>
-											<div class="goods__bottom">
-												<div class="goods__price">
-													<div class="goods__price-left"><span class="goods__newPrice">7500</span> ₽/шт.</div>
-												</div>
-												<button class="goods__btn">
-													<img src="images/but-cart.svg" alt="addCart" />
-													В корзину
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="goods__card">
-										<img class="goods__image" src="images/goods/stock2.jpg" alt="stock2" />
-										<div class="goods__content">
-											<div class="goods__reviews">
-												<div class="goods__stars">
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-												</div>
-												<span class="goods__stars-count">(1)</span>
-											</div>
-											<div class="goods__info">
-												<h5 class="goods__card-title">Сыр Халуми сливочный для жарки пикантный</h5>
-												<span class="goods__brand">от Маргариты Сафоновой</span>
-												<p class="goods__desc">Традиционный сыр для халуми сливочный для жарки, изготавливается</p>
-											</div>
-											<div class="goods__bottom">
-												<div class="goods__price">
-													<div class="goods__price-left"><span class="goods__newPrice">7500</span> ₽/шт.</div>
-												</div>
-												<button class="goods__btn">
-													<img src="images/but-cart.svg" alt="addCart" />
-													В корзину
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="goods__card">
-										<img class="goods__image" src="images/goods/stock3.jpg" alt="stock3" />
-										<div class="goods__content">
-											<div class="goods__reviews">
-												<div class="goods__stars">
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-												</div>
-												<span class="goods__stars-count">(1)</span>
-											</div>
-											<div class="goods__info">
-												<h5 class="goods__card-title">Сыр Халуми сливочный для жарки</h5>
-												<span class="goods__brand">от Маргариты Сафоновой по страрому рецепту</span>
-												<p class="goods__desc">Традиционный сыр для халуми сливочный для жарки, изготавливается</p>
-											</div>
-											<div class="goods__bottom">
-												<div class="goods__price">
-													<div class="goods__price-left"><span class="goods__newPrice">7500</span> ₽/шт.</div>
-												</div>
-												<button class="goods__btn">
-													<img src="images/but-cart.svg" alt="addCart" />
-													В корзину
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="goods__card">
-										<img class="goods__image" src="images/goods/stock4.jpg" alt="stock4" />
-										<div class="goods__content">
-											<div class="goods__reviews">
-												<div class="goods__stars">
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-												</div>
-												<span class="goods__stars-count">(1)</span>
-											</div>
-											<div class="goods__info">
-												<h5 class="goods__card-title">Сыр Халуми сливочный для жарки пикантный с ароматом запеченного</h5>
-												<span class="goods__brand">от Маргариты Сафоновой по страрому рецепту</span>
-												<p class="goods__desc">Традиционный сыр для халуми</p>
-											</div>
-											<div class="goods__bottom">
-												<div class="goods__price">
-													<div class="goods__price-left"><span class="goods__newPrice">7500</span> ₽/шт.</div>
-												</div>
-												<button class="goods__btn">
-													<img src="images/but-cart.svg" alt="addCart" />
-													В корзину
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- <div class="swiper-button-prev"></div>
-							<div class="swiper-button-next"></div> -->
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="newItems">
-			<div class="container">
-				<div class="goods__inner">
-					<div class="goods__panel">
-						<h2 class="goods__title">Наши новинки</h2>
-						<div class="goods__seemore">
-							<a href="#">Смотреть все</a>
-							<div class="goods__seemore-arrows">
-								<button><img src="images/see-left.svg" alt="see-left" /></button>
-								<button><img src="images/see-right.svg" alt="see-right" /></button>
-							</div>
-						</div>
-					</div>
-					<div class="goods__list">
-						<div class="swiperGoods swiper">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<div class="goods__card">
-										<img class="goods__image" src="images/goods/stock1.jpg" alt="stock1" />
-										<div class="goods__content">
-											<div class="goods__reviews">
-												<div class="goods__stars">
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-												</div>
-												<span class="goods__stars-count">(1)</span>
-											</div>
-											<div class="goods__info">
-												<h5 class="goods__card-title">Сыр Халуми сливочный</h5>
-												<span class="goods__brand">от Маргариты Сафоновой</span>
-												<p class="goods__desc">Традиционный сыр для халуми сливочный для жарки, изготавливается с малым количеством соли</p>
-											</div>
-											<div class="goods__bottom">
-												<div class="goods__price">
-													<div class="goods__price-left"><span class="goods__newPrice">7500</span> ₽/шт.</div>
-												</div>
-												<button class="goods__btn">
-													<img src="images/but-cart.svg" alt="addCart" />
-													В корзину
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="goods__card">
-										<img class="goods__image" src="images/goods/stock2.jpg" alt="stock2" />
-										<div class="goods__content">
-											<div class="goods__reviews">
-												<div class="goods__stars">
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-												</div>
-												<span class="goods__stars-count">(1)</span>
-											</div>
-											<div class="goods__info">
-												<h5 class="goods__card-title">Сыр Халуми сливочный для жарки пикантный</h5>
-												<span class="goods__brand">от Маргариты Сафоновой</span>
-												<p class="goods__desc">Традиционный сыр для халуми сливочный для жарки, изготавливается</p>
-											</div>
-											<div class="goods__bottom">
-												<div class="goods__price">
-													<div class="goods__price-left"><span class="goods__newPrice">7500</span> ₽/шт.</div>
-												</div>
-												<button class="goods__btn">
-													<img src="images/but-cart.svg" alt="addCart" />
-													В корзину
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="goods__card">
-										<img class="goods__image" src="images/goods/stock3.jpg" alt="stock3" />
-										<div class="goods__content">
-											<div class="goods__reviews">
-												<div class="goods__stars">
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-												</div>
-												<span class="goods__stars-count">(1)</span>
-											</div>
-											<div class="goods__info">
-												<h5 class="goods__card-title">Сыр Халуми сливочный для жарки</h5>
-												<span class="goods__brand">от Маргариты Сафоновой по страрому рецепту</span>
-												<p class="goods__desc">Традиционный сыр для халуми сливочный для жарки, изготавливается</p>
-											</div>
-											<div class="goods__bottom">
-												<div class="goods__price">
-													<div class="goods__price-left"><span class="goods__newPrice">7500</span> ₽/шт.</div>
-												</div>
-												<button class="goods__btn">
-													<img src="images/but-cart.svg" alt="addCart" />
-													В корзину
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="goods__card">
-										<img class="goods__image" src="images/goods/stock4.jpg" alt="stock4" />
-										<div class="goods__content">
-											<div class="goods__reviews">
-												<div class="goods__stars">
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-												</div>
-												<span class="goods__stars-count">(1)</span>
-											</div>
-											<div class="goods__info">
-												<h5 class="goods__card-title">Сыр Халуми сливочный для жарки пикантный с ароматом запеченного</h5>
-												<span class="goods__brand">от Маргариты Сафоновой по страрому рецепту</span>
-												<p class="goods__desc">Традиционный сыр для халуми</p>
-											</div>
-											<div class="goods__bottom">
-												<div class="goods__price">
-													<div class="goods__price-left"><span class="goods__newPrice">7500</span> ₽/шт.</div>
-												</div>
-												<button class="goods__btn">
-													<img src="images/but-cart.svg" alt="addCart" />
-													В корзину
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- <div class="swiper-button-prev"></div>
-							<div class="swiper-button-next"></div> -->
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="newItems">
-			<div class="container">
-				<div class="goods__inner">
-					<div class="goods__panel">
-						<h2 class="goods__title">Рекомендуем попробовать</h2>
-						<div class="goods__seemore">
-							<a href="#">Смотреть все</a>
-							<div class="goods__seemore-arrows">
-								<button><img src="images/see-left.svg" alt="see-left" /></button>
-								<button><img src="images/see-right.svg" alt="see-right" /></button>
-							</div>
-						</div>
-					</div>
-					<div class="goods__list">
-						<div class="swiperGoods swiper">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<div class="goods__card">
-										<img class="goods__image" src="images/goods/stock1.jpg" alt="stock1" />
-										<div class="goods__content">
-											<div class="goods__reviews">
-												<div class="goods__stars">
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-												</div>
-												<span class="goods__stars-count">(1)</span>
-											</div>
-											<div class="goods__info">
-												<h5 class="goods__card-title">Сыр Халуми сливочный</h5>
-												<span class="goods__brand">от Маргариты Сафоновой</span>
-												<p class="goods__desc">Традиционный сыр для халуми сливочный для жарки, изготавливается с малым количеством соли</p>
-											</div>
-											<div class="goods__bottom">
-												<div class="goods__price">
-													<div class="goods__price-left"><span class="goods__newPrice">7500</span> ₽/шт.</div>
-												</div>
-												<button class="goods__btn">
-													<img src="images/but-cart.svg" alt="addCart" />
-													В корзину
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="goods__card">
-										<img class="goods__image" src="images/goods/stock2.jpg" alt="stock2" />
-										<div class="goods__content">
-											<div class="goods__reviews">
-												<div class="goods__stars">
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-												</div>
-												<span class="goods__stars-count">(1)</span>
-											</div>
-											<div class="goods__info">
-												<h5 class="goods__card-title">Сыр Халуми сливочный для жарки пикантный</h5>
-												<span class="goods__brand">от Маргариты Сафоновой</span>
-												<p class="goods__desc">Традиционный сыр для халуми сливочный для жарки, изготавливается</p>
-											</div>
-											<div class="goods__bottom">
-												<div class="goods__price">
-													<div class="goods__price-left"><span class="goods__newPrice">7500</span> ₽/шт.</div>
-												</div>
-												<button class="goods__btn">
-													<img src="images/but-cart.svg" alt="addCart" />
-													В корзину
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="goods__card">
-										<img class="goods__image" src="images/goods/stock3.jpg" alt="stock3" />
-										<div class="goods__content">
-											<div class="goods__reviews">
-												<div class="goods__stars">
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-												</div>
-												<span class="goods__stars-count">(1)</span>
-											</div>
-											<div class="goods__info">
-												<h5 class="goods__card-title">Сыр Халуми сливочный для жарки</h5>
-												<span class="goods__brand">от Маргариты Сафоновой по страрому рецепту</span>
-												<p class="goods__desc">Традиционный сыр для халуми сливочный для жарки, изготавливается</p>
-											</div>
-											<div class="goods__bottom">
-												<div class="goods__price">
-													<div class="goods__price-left"><span class="goods__newPrice">7500</span> ₽/шт.</div>
-												</div>
-												<button class="goods__btn">
-													<img src="images/but-cart.svg" alt="addCart" />
-													В корзину
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="goods__card">
-										<img class="goods__image" src="images/goods/stock4.jpg" alt="stock4" />
-										<div class="goods__content">
-											<div class="goods__reviews">
-												<div class="goods__stars">
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-													<img src="images/star.svg" alt="" />
-												</div>
-												<span class="goods__stars-count">(1)</span>
-											</div>
-											<div class="goods__info">
-												<h5 class="goods__card-title">Сыр Халуми сливочный для жарки пикантный с ароматом запеченного</h5>
-												<span class="goods__brand">от Маргариты Сафоновой по страрому рецепту</span>
-												<p class="goods__desc">Традиционный сыр для халуми</p>
-											</div>
-											<div class="goods__bottom">
-												<div class="goods__price">
-													<div class="goods__price-left"><span class="goods__newPrice">7500</span> ₽/шт.</div>
-												</div>
-												<button class="goods__btn">
-													<img src="images/but-cart.svg" alt="addCart" />
-													В корзину
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- <div class="swiper-button-prev"></div>
-							<div class="swiper-button-next"></div> -->
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<footer></footer>
+
 		<script src="swiper-bundle.min.js"></script>
 		<script src="script.js"></script>
 	</body>
