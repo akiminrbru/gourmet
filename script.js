@@ -229,22 +229,19 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         
         breakpoints: {
-            // when window width is >= 320px
             320: {
               slidesPerView: 2,
               spaceBetween: 18
             },
-            // when window width is >= 480px
             992: {
               slidesPerView: 3,
               spaceBetween: 18
             },
-            // when window width is >= 640px
             1375: {
               slidesPerView: 4,
               spaceBetween:18
             }
-          }
+        }
     });
 
     const swiperGoodsPrev6 = document.getElementById("swiper-goods-next6");
@@ -266,19 +263,56 @@ document.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 60,
         slidesPerView: 5,
         freeMode: true,
-        watchSlidesProgress: true
+        watchSlidesProgress: true,
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 30
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            992: {
+              slidesPerView: 4,
+              spaceBetween: 30
+            },
+            1200: {
+              slidesPerView: 5,
+              spaceBetween: 30
+            },
+            1375: {
+              slidesPerView: 5,
+              spaceBetween:60
+            }
+        }
       });
     const mainSwiper2 = new Swiper(".mainSwiper2", {
         loop: true,
         spaceBetween: 10,
+        autoplay: {
+            delay: 4870,
+        },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
+          nextEl: ".swiper-main-next",
+          prevEl: ".swiper-main-prev"
         },
         thumbs: {
           swiper: mainSwiper
-        }
+        } 
     });
+
+    const swiperMainPrev = document.getElementById("swiper-main-next");
+    const swiperMainNext = document.getElementById("swiper-main-prev");
+
+    if (swiperMainPrev && swiperMainNext) {
+        swiperMainPrev.addEventListener("click", () => {
+            mainSwiper2.slidePrev();
+        });
+        swiperMainNext.addEventListener("click", () => {
+            mainSwiper2.slideNext();
+        });
+    }
 
     // Детальный баннер
 
@@ -315,7 +349,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-
     // Перемещение элемента в футере
 
     const place = document.querySelector('.footer__content');
@@ -344,7 +377,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (elements) {
         elements.forEach(el => {
             el.addEventListener('click', (e) => {
-                console.log(e.target)
                 const elemBtn = e.target.lastElementChild;
                 const elemUl = e.target.parentNode.lastElementChild;
                 elemUl.classList.toggle('footer__nav-listOpen');

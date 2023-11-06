@@ -109,6 +109,23 @@ img {
 	stroke: #822a27;
 }
 
+.header__bar .header__cartItemFill {
+	gap: 6px;
+}
+
+.header__cartItemFill span {
+	color: #fff;
+	font-size: 10px;
+	font-weight: 500;
+	padding: 1px 7px;
+	border-radius: 100px;
+	background: #822a27;
+}
+
+a.header__cartItemFill:hover span {
+	color: #fff;
+}
+
 .header__bar img {
 	width: 25px;
 	height: 25px;
@@ -178,10 +195,11 @@ img {
 	padding: 18px 0;
 	margin-bottom: -1px;
 	border-bottom: 2px solid transparent;
-	transition: border-bottom 0.24s ease;
+	transition: border-bottom 0.24s ease, color 0.24s ease;
 }
 
 .header__menu li a:hover {
+	color: #822a27;
 	border-bottom: 2px solid #822a27;
 }
 
@@ -632,6 +650,28 @@ img {
 .goods__btn img {
 	width: 18px;
 	height: 18px;
+}
+
+.goods__quantity {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 3px;
+	background: #f2f2f2;
+	padding: 15px 24px;
+}
+
+.goods__quantity p {
+	color: #15161c;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 120%;
+}
+
+.goods__quantity button {
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
 }
 
 @media screen and (max-width: 1375px) {
@@ -1158,21 +1198,11 @@ img {
 	position: relative;
 }
 
-.mainSwiper .swiper-slide-thumb-active {
-}
-
-.mainSwiper .swiper-slide-thumb-active::before {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(130, 42, 39, 0.5);
-}
-
 .mainSwiper .bannerMain__card {
 	padding: 10px 10px 20px 10px;
+	border-radius: 3px;
 	cursor: pointer;
+	position: relative;
 }
 
 .mainSwiper .bannerMain__card h2 {
@@ -1198,6 +1228,101 @@ img {
 	top: auto;
 	right: 30px;
 	bottom: 10px;
+}
+
+.mainSwiper .swiper-slide-thumb-active .bannerMain__card-outer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(130, 42, 39, 0.5);
+	border-radius: 3px;
+}
+
+.mainSwiper .swiper-slide-thumb-active .bannerMain__card-outer .bannerMain__card-scroll {
+	position: absolute;
+	bottom: 0;
+	width: 0;
+	height: 4px;
+	border-radius: 0px 0px 0px 3px;
+	background: rgba(255, 255, 255, 0.8);
+	animation: scroll 5s linear;
+}
+
+.mainSwiper2 .swiper-main-next {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 100px;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	background: linear-gradient(270deg, #15161c 0%, rgba(21, 22, 28, 0) 100%);
+	opacity: 0;
+	transition: opacity 0.24s ease;
+}
+
+.mainSwiper2 .swiper-main-prev {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 100px;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	background: linear-gradient(90deg, #15161c 0%, rgba(21, 22, 28, 0) 100%);
+	opacity: 0;
+	transition: opacity 0.24s ease;
+}
+
+.mainSwiper2 .swiper-main-next:hover {
+	opacity: 1;
+}
+
+.mainSwiper2 .swiper-main-prev:hover {
+	opacity: 1;
+}
+
+.mainSwiper2 .swiper-main-prev img {
+	width: 20px;
+	height: 25px;
+	margin-right: 30px;
+}
+
+.mainSwiper2 .swiper-main-next img {
+	width: 20px;
+	height: 25px;
+	margin-left: 30px;
+}
+
+@keyframes scroll {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.mainSwiper {
+		display: none;
+	}
+
+	.mainSwiper2 .swiper-main-next {
+		display: none;
+	}
+
+	.mainSwiper2 .swiper-main-prev {
+		display: none;
+	}
 }
 
 /* Баннер на детальной */
