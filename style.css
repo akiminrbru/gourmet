@@ -204,6 +204,7 @@ a.header__cartItemFill:hover span {
 	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
+	pointer-events: none;
 }
 
 .header__menu {
@@ -2176,8 +2177,12 @@ a.header__cartItemFill:hover span {
 	text-decoration: none;
 	transition: color 0.24s ease;
 }
-
+/* 
 .header__catalogNav ul li a:hover {
+	color: #822a27;
+} */
+
+.header__catalogNav-tablink.active {
 	color: #822a27;
 }
 
@@ -2187,6 +2192,11 @@ a.header__cartItemFill:hover span {
 	padding-right: 75px;
 	overflow-y: auto;
 	max-height: 714px;
+	display: none;
+}
+
+.header__catalogContent.active {
+	display: block;
 }
 
 .header__catalogContent::-webkit-scrollbar-track {

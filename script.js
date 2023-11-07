@@ -408,7 +408,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (toogleAdditionBtn) {
         toogleAdditionBtn.forEach(elem => {
             elem.addEventListener('click', (e) => {
-                console.log(e.target.parentNode.lastElementChild)
                 const currentArrow = e.target.lastElementChild;
                 const currentElem = e.target.parentNode.lastElementChild.firstElementChild;
                 currentElem.classList.toggle('detailMain__addition-listActive');
@@ -442,7 +441,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // По умолчанию показать первую вкладку
+        // По умолчанию показать первую вкладку
     if (document.getElementById("tab1")) {
         document.getElementById("tab1").classList.add('detailMain__addition-tabcontentActive');
     }
@@ -476,27 +475,63 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const catalogBtn = document.querySelector('.header__catalogBtn');
     const catalog = document.querySelector('.header__catalog');
-
-    console.log(catalogBtn);
-    console.log(catalog);
+    const header__search = document.querySelector('.header__search');
 
     if (catalogBtn) {
+        catalogBtn.addEventListener('mouseenter', () => {
+            catalogBtn.classList.add('active');
+            catalog.classList.add('active');
+        });
+
         catalogBtn.addEventListener('click', () => {
             catalogBtn.classList.toggle('active');
             catalog.classList.toggle('active');
         });
+    }
 
-        // console.log(catalogBtn.classList)
+    if (catalog) {
+        catalog.addEventListener('mouseleave', () => {
+            catalogBtn.classList.remove('active');
+            catalog.classList.remove('active');
+        });
+    }
 
-        // catalogBtn.classList.forEach(cl => {
-        //     if (cl === 'active') {
-                
-        //     }
-        // });
+    if (header__search) {
+        header__search.addEventListener('mouseenter', () => {
+            catalogBtn.classList.remove('active');
+            catalog.classList.remove('active');
+        });
+    }
 
-        // catalogBtn.addEventListener('mouseover', () => {
-        //     catalogBtn.classList.add('active');
-        //     catalog.classList.add('active');
-        // });
+    // Табы в каталоге
+
+    const tabCatLinks = document.querySelectorAll(".header__catalogNav-tablink");
+    const tabCatContents = document.querySelectorAll(".header__catalogContent");
+ 
+    tabCatLinks.forEach((tabLink) => {
+    tabLink.addEventListener("mouseover", function(e) {
+
+        // Скрываем все контенты
+        tabCatLinks.forEach((tabLink2) => {
+            tabLink2.classList.remove('active');
+        })
+        e.target.classList.add('active');
+    
+        tabCatContents.forEach((content) => {
+            content.classList.remove('active');
+        });
+        // Находим соответствующий контент и показываем его
+        const tabId = this.getAttribute("data-cat-tab");
+            document.getElementById(tabId).classList.toggle('active');
+        });
+    });
+
+    // По умолчанию показать первую вкладку
+    if (document.getElementById("tabCat1")) {
+        document.getElementById("tabCat1").classList.add('active');
+    }
+
+    if (document.querySelector('.header__catalogNav-tablink[data-cat-tab="tabCat1"]')) {
+        document.querySelector('.header__catalogNav-tablink[data-cat-tab="tabCat1"]').classList.add('active');
     }
 });
