@@ -472,4 +472,31 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }    
 
+    // Каталог
+    
+    const catalogBtn = document.querySelector('.header__catalogBtn');
+    const catalog = document.querySelector('.header__catalog');
+
+    console.log(catalogBtn);
+    console.log(catalog);
+
+    if (catalogBtn) {
+        catalogBtn.addEventListener('click', () => {
+            catalogBtn.classList.toggle('active');
+            catalog.classList.toggle('active');
+        });
+
+        // console.log(catalogBtn.classList)
+
+        // catalogBtn.classList.forEach(cl => {
+        //     if (cl === 'active') {
+                
+        //     }
+        // });
+
+        // catalogBtn.addEventListener('mouseover', () => {
+        //     catalogBtn.classList.add('active');
+        //     catalog.classList.add('active');
+        // });
+    }
 });

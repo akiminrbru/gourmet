@@ -23,11 +23,58 @@
 							</div>
 						</div>
 						<button class="header__catalogBtn">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="#822A27" />
-							</svg>
+							<div class="header__catalogBtn-image"></div>
 							<span>каталог</span>
 						</button>
+						<div class="header__catalog">
+							<div class="container">
+								<div class="header__catalog-inner">
+									<div class="header__catalogNav">
+										<ul>
+											<li><a href="#">ЭЛИТНЫЕ СЫРЫ</a></li>
+											<li><a href="#">МЯСНАЯ ГАСТРОНОМИЯ</a></li>
+											<li><a href="#">РЫБНАЯ ГАСТРОНОМИЯ</a></li>
+											<li><a href="#">АНТИПАСТИ</a></li>
+											<li><a href="#">ГАСТРОНОМИЧЕСКИЕ СЕТЫ</a></li>
+											<li><a href="#">ПАСТА И РИЗОТТО</a></li>
+											<li><a href="#">ТРЮФЕЛИ</a></li>
+											<li><a href="#">ИЗДЕЛИЯ ИЗ ЗЛАКОВ</a></li>
+											<li><a href="#">МАСЛА И УКСУСЫ</a></li>
+											<li><a href="#">СОУСЫ И НАМАЗКИ</a></li>
+											<li><a href="#">СПЕЦИИ И ПРИПРАВЫ</a></li>
+											<li><a href="#">МОЛОЧНЫЕ ПРОДУКТЫ</a></li>
+											<li><a href="#">КОНФЕТЫ И СЛАДОСТИ</a></li>
+											<li><a href="#">МЕД И ВАРЕНЬЯ</a></li>
+											<li><a href="#">ЧАЙ И КОФЕ</a></li>
+											<li><a href="#">НАПИТКИ</a></li>
+											<li><a href="#">ПОДАРКИ И НАБОРЫ</a></li>
+											<li><a href="#">АКСЕССУАРЫ И УПАКОВКА</a></li>
+										</ul>
+									</div>
+									<div class="header__catalogContent">
+										<div class="header__catalogContent-item">
+											<div class="header__catalogContent-title">
+												<a href="#">Популярные категории</a>
+											</div>
+											<div class="header__catalogContent-links">
+												<ul>
+													<li><a href="#">Бри и Камамбер</a></li>
+													<li><a href="#"> Голубые сыры</a></li>
+												</ul>
+												<ul>
+													<li><a href="#">Моцарелла и буррата</a></li>
+													<li><a href="#">Сыры с трюфелем</a></li>
+												</ul>
+												<ul>
+													<li><a href="#">Сыры с мытой корочкой</a></li>
+													<li><a href="#">Фермерские сыры</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 						<div class="header__search">
 							<input type="text" />
 							<button>
@@ -104,7 +151,7 @@
 								</svg>
 								<span>Корзина</span>
 							</a>
-							<!-- <a class="header__cartItemFill" href="">
+							<a class="header__cartItemFill" href="#" style="display: none">
 								<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<g clip-path="url(#clip0_150_1433)">
 										<mask id="mask0_150_1433" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="25">
@@ -128,7 +175,7 @@
 									</defs>
 								</svg>
 								<span>10 300 ₽</span>
-							</a> -->
+							</a>
 						</div>
 					</div>
 				</div>
@@ -265,11 +312,122 @@
 									</div>
 								</div>
 							</li>
-							<li><a href="#">РЫБНАЯ ГАСТРОНОМИЯ</a></li>
-							<li><a href="#">НАПИТКИ</a></li>
-							<li><a href="#">МОЛОЧНЫЕ ПРОДУКТЫ</a></li>
-							<li><a href="#">ДЕСЕРТЫ И СЛАДОСТИ</a></li>
-							<li><a href="#">ПОДАРКИ И НАБОРЫ</a></li>
+							<li>
+								<a href="#">РЫБНАЯ ГАСТРОНОМИЯ</a>
+								<div class="header__submenu">
+									<div class="container">
+										<div class="header__submenu-inner">
+											<div class="header__submenu-item">
+												<h5>РЫБНАЯ ГАСТРОНОМИЯ</h5>
+												<div class="header__submenu-links">
+													<ul>
+														<li><a href="#">Копченая рыба</a></li>
+														<li><a href="#">Вяленая рыба</a></li>
+													</ul>
+													<ul>
+														<li><a href="#">Слабосоленая рыба</a></li>
+														<li><a href="#">Икра</a></li>
+													</ul>
+													<ul>
+														<li><a href="#">Мясо Краба</a></li>
+														<li><a href="#">Рыбные консервы</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="#">НАПИТКИ</a>
+								<div class="header__submenu">
+									<div class="container">
+										<div class="header__submenu-inner">
+											<div class="header__submenu-item">
+												<h5>НАПИТКИ</h5>
+												<div class="header__submenu-links">
+													<ul>
+														<li><a href="#">Минеральная Вода</a></li>
+													</ul>
+													<ul>
+														<li><a href="#">Морсы</a></li>
+													</ul>
+													<ul>
+														<li><a href="#">Соки</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="#">МОЛОЧНЫЕ ПРОДУКТЫ</a>
+								<div class="header__submenu">
+									<div class="container">
+										<div class="header__submenu-inner">
+											<div class="header__submenu-item">
+												<h5>МОЛОЧНЫЕ ПРОДУКТЫ</h5>
+												<div class="header__submenu-links">
+													<ul>
+														<li><a href="#">Молоко и сливки</a></li>
+														<li><a href="#">Творог</a></li>
+													</ul>
+													<ul>
+														<li><a href="#">Йогурты</a></li>
+														<li><a href="#">Сметана</a></li>
+													</ul>
+													<ul>
+														<li><a href="#">Масло</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="#">ДЕСЕРТЫ И СЛАДОСТИ</a>
+								<div class="header__submenu">
+									<div class="container">
+										<div class="header__submenu-inner">
+											<div class="header__submenu-item">
+												<h5>ДЕСЕРТЫ И СЛАДОСТИ</h5>
+												<div class="header__submenu-links">
+													<ul>
+														<li><a href="#">Туррон</a></li>
+														<li><a href="#">Шоколад</a></li>
+													</ul>
+													<ul>
+														<li><a href="#">Сырные конфеты</a></li>
+														<li><a href="#">Макарони</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="#">ПОДАРКИ И НАБОРЫ</a>
+								<div class="header__submenu">
+									<div class="container">
+										<div class="header__submenu-inner">
+											<div class="header__submenu-item">
+												<h5>ПОДАРКИ И НАБОРЫ</h5>
+												<div class="header__submenu-links">
+													<ul>
+														<li><a href="#">Гастрономические подарки</a></li>
+													</ul>
+													<ul>
+														<li><a href="#">Продуктовые корзины</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
 						</ul>
 					</div>
 				</nav>

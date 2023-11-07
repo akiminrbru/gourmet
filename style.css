@@ -154,11 +154,36 @@ a.header__cartItemFill:hover span {
 	transition: background-color 0.24s ease, color 0.24s ease;
 }
 
-.header__catalogBtn:hover {
+.header__catalogBtn-image {
+	width: 24px;
+	height: 24px;
+	background-image: url("images/menu.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: background-image 0.24s ease;
+}
+
+.header__catalogBtn.active .header__catalogBtn-image {
+	background-image: url("images/close.svg");
+}
+
+.header__catalogBtn.active {
 	background-color: #822a27;
 }
 
-.header__catalogBtn:hover span {
+.header__catalogBtn.active span {
+	color: #fff;
+}
+
+.header__catalogBtn.active svg path {
+	fill: #fff;
+}
+
+/* .header__catalogBtn:hover {
+	background-color: #822a27;
+}
+
+.header__catalogBtn span {
 	transition: color 0.24s ease;
 }
 
@@ -166,20 +191,19 @@ a.header__cartItemFill:hover span {
 	color: #fff;
 }
 
-.header__catalogBtn:hover svg path {
+.header__catalogBtn svg path {
 	transition: fill 0.24s ease;
 }
 
 .header__catalogBtn:hover svg path {
 	fill: #fff;
-}
+} */
 
 .header__catalogBtn span {
 	color: #822a27;
 	font-size: 14px;
-	font-weight: 500;
+	font-weight: 700;
 	text-transform: uppercase;
-	font-family: "Inter", sans-serif;
 }
 
 .header__menu {
@@ -2008,6 +2032,12 @@ a.header__cartItemFill:hover span {
 	}
 }
 
+@media screen and (max-width: 360px) {
+	.breadcrumbs__inner li {
+		font-size: 11px;
+	}
+}
+
 /* Топ меню */
 
 .header__submenu {
@@ -2021,6 +2051,7 @@ a.header__cartItemFill:hover span {
 	transition: max-height 1.5s ease;
 	max-height: 0;
 	overflow: hidden;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 25px -5px, rgba(0, 0, 0, 0.1) 0px 10px 10px -5px;
 }
 
 .header__submenu-inner {
@@ -2074,6 +2105,144 @@ a.header__cartItemFill:hover span {
 	max-height: 1500px;
 }
 
+.header__menu > li:not(:hover) .header__submenu {
+	transition: max-height 0s ease;
+}
+
 .header__menu > li:hover > a {
 	border-bottom: 2px solid #822a27;
+}
+
+/* Каталог */
+
+.header__catalog {
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 91px;
+	z-index: 10;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 25px -5px, rgba(0, 0, 0, 0.1) 0px 10px 10px -5px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 1.5s ease;
+}
+
+.header__catalog.active {
+	max-height: 1500px;
+}
+
+.header__catalog-inner {
+	display: flex;
+}
+
+.header__catalogNav {
+	padding: 0 40px;
+	width: 300px;
+	overflow-y: auto;
+	max-height: 714px;
+}
+
+.header__catalogNav::-webkit-scrollbar-track {
+	border-radius: 3px;
+	background: #e0e0e0;
+}
+
+.header__catalogNav::-webkit-scrollbar {
+	width: 4px;
+}
+
+.header__catalogNav::-webkit-scrollbar-thumb {
+	border-radius: 3px;
+	background: #bdbdbd;
+}
+
+.header__catalogNav ul {
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+}
+
+.header__catalogNav ul li a {
+	display: inline-block;
+	padding: 12px 0px 11px 0px;
+	border-bottom: 1px solid #e0e0e0;
+	width: 100%;
+	color: #15161c;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 18px;
+	letter-spacing: 0.7px;
+	text-decoration: none;
+	transition: color 0.24s ease;
+}
+
+.header__catalogNav ul li a:hover {
+	color: #822a27;
+}
+
+.header__catalogContent {
+	padding-top: 40px;
+	padding-left: 75px;
+	padding-right: 75px;
+	overflow-y: auto;
+	max-height: 714px;
+}
+
+.header__catalogContent::-webkit-scrollbar-track {
+	border-radius: 3px;
+	background: #e0e0e0;
+}
+
+.header__catalogContent::-webkit-scrollbar {
+	width: 4px;
+}
+
+.header__catalogContent::-webkit-scrollbar-thumb {
+	border-radius: 3px;
+	background: #bdbdbd;
+}
+
+.header__catalogContent-item {
+	margin-bottom: 40px;
+}
+
+.header__catalogContent-title a {
+	color: #822a27;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 0.78px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.header__catalogContent-title {
+	padding-bottom: 6px;
+	border-bottom: 1px solid #e0e0e0;
+	margin-bottom: 20px;
+}
+
+.header__catalogContent-links {
+	display: flex;
+	gap: 50px;
+}
+
+.header__catalogContent-links ul {
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	width: 250px;
+}
+
+.header__catalogContent-links ul li a {
+	color: #4f4e57;
+	font-size: 14px;
+	font-weight: 400;
+	transition: color 0.24s ease;
+	text-decoration: none;
+}
+
+.header__catalogContent-links ul li a:hover {
+	color: #822a27;
 }
