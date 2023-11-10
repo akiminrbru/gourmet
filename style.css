@@ -15,8 +15,28 @@ img {
 	height: auto;
 }
 
+body {
+	padding-top: 146px;
+}
+@media screen and (max-width: 992px) {
+	body {
+		padding-top: 81px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	body {
+		padding-top: 65px;
+	}
+}
+
 .header {
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	background-color: #fff;
 }
 
 .header__panel-inner {
@@ -138,6 +158,14 @@ a.header__cartItemFill:hover span {
 .header__nav {
 	border-top: 1px solid #e0e0e0;
 	border-bottom: 1px solid #e0e0e0;
+	max-height: 100%;
+	transition: max-height 0.24s ease, border-bottom 0.24s ease;
+}
+
+.header__nav.disable {
+	max-height: 0px;
+	overflow: hidden;
+	border-bottom: 0;
 }
 
 .header__catalogBtn {
@@ -317,6 +345,12 @@ a.header__cartItemFill:hover span {
 	}
 }
 
+@media screen and (max-width: 576px) {
+	.header__panel-inner {
+		padding: 10px 0;
+	}
+}
+
 @media screen and (max-width: 360px) {
 	.header__logo-wrapper {
 		gap: 10px;
@@ -335,18 +369,24 @@ a.header__cartItemFill:hover span {
 .bannerMain__card {
 	border-radius: 3px;
 	background: linear-gradient(-90deg, #872527 0%, #15161c 100%);
-	padding: 58px 70px 158px 70px;
 	position: relative;
+	display: flex;
+	justify-content: space-between;
+	gap: 50px;
+	align-items: center;
+	padding: 58px 122px 41px 123px;
+}
+
+.bannerMain__left {
+	max-width: 580px;
 }
 
 .bannerMain__card h2 {
 	color: #fff;
-	font-family: "Manrope", sans-serif;
 	font-size: 55px;
 	font-weight: 500;
 	line-height: 110%;
 	margin-bottom: 20px;
-	max-width: 377px;
 }
 
 .bannerMain__card p {
@@ -355,7 +395,6 @@ a.header__cartItemFill:hover span {
 	font-weight: 400;
 	line-height: 145%;
 	margin-bottom: 42px;
-	max-width: 291px;
 }
 
 .bannerMain__card a {
@@ -375,80 +414,101 @@ a.header__cartItemFill:hover span {
 	background-color: #822a27;
 }
 
-.bannerMain__img {
-	width: 482px;
-	position: absolute;
-	top: 58px;
-	bottom: 41px;
-	right: 222px;
+@media screen and (max-width: 1375px) {
+	.bannerMain__card h2 {
+		font-size: 46px;
+	}
+
+	.bannerMain__left {
+		max-width: 500px;
+	}
 }
 
 @media screen and (max-width: 1200px) {
-	.bannerMain__img {
-		right: 100px;
+	.bannerMain__card {
+		padding: 45px 70px;
 	}
 }
 
 @media screen and (max-width: 992px) {
 	.bannerMain__card h2 {
-		font-size: 38px;
+		font-size: 32px;
 	}
 
-	.bannerMain__img {
-		width: 350px;
-		top: 100px;
-		right: 60px;
+	.bannerMain__card p {
+		font-size: 15px;
+	}
+
+	.bannerMain__card a {
+		font-size: 15px;
+	}
+
+	.bannerMain__left {
+		max-width: 400px;
 	}
 }
 
 @media screen and (max-width: 768px) {
-	.bannerMain__img {
-		width: 300px;
-		top: 230px;
-		right: 30px;
-	}
-
 	.bannerMain__card {
-		padding: 63px 25px 181px 25px;
-	}
-}
-
-@media screen and (max-width: 576px) {
-	.bannerMain__inner {
-		margin-left: -25px;
-		margin-right: -25px;
-	}
-
-	.bannerMain {
-		margin-top: 0;
-		margin-bottom: 40px;
-	}
-
-	.bannerMain__card {
-		border-radius: 0;
+		padding: 30px 50px;
 	}
 
 	.bannerMain__card h2 {
-		font-size: 24px;
+		font-size: 22px;
 		margin-bottom: 10px;
 	}
 
 	.bannerMain__card p {
-		margin-bottom: 30px;
 		font-size: 14px;
+		margin-bottom: 25px;
+	}
+
+	.bannerMain__card a {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.bannerMain__card {
+		padding: 12.5px 15px;
+		gap: 34px;
+	}
+
+	.bannerMain__left {
+		max-width: 156px;
+	}
+
+	.bannerMain__right {
+		max-width: 122px;
+	}
+
+	.bannerMain__card h2 {
+		font-size: 14px;
+		line-height: 110%;
+		font-weight: 600;
+	}
+
+	.bannerMain__card p {
+		font-size: 8px;
+		font-weight: 300;
+		line-height: 140%;
+	}
+
+	.mainSwiper2 {
+		overflow: visible;
+	}
+
+	.bannerMain {
+		margin-top: 10px;
+		margin-bottom: 25px;
+		overflow: hidden;
 	}
 
 	.bannerMain__card a {
 		padding: 15px 40px;
 		border-radius: 0;
 		font-size: 14px;
-	}
-
-	.bannerMain__img {
-		top: auto;
-		width: 213px;
-		right: 25px;
-		bottom: 16px;
+		display: none;
 	}
 }
 
@@ -492,7 +552,7 @@ a.header__cartItemFill:hover span {
 
 .goods__title {
 	color: #15161c;
-	font-family: "Manrope", sans-serif;
+	/* font-family: "Manrope", sans-serif; */
 	font-size: 30px;
 	font-weight: 600;
 	line-height: 120%;
@@ -530,7 +590,7 @@ a.header__cartItemFill:hover span {
 
 .goods__image {
 	border-radius: 3px;
-	height: 200px;
+	aspect-ratio: 3/2;
 	margin-bottom: 15px;
 }
 
@@ -573,7 +633,7 @@ a.header__cartItemFill:hover span {
 
 .goods__card-title {
 	color: #822a27;
-	font-family: "Manrope", sans-serif;
+	/* font-family: "Manrope", sans-serif; */
 	font-size: 16px;
 	font-weight: 600;
 	line-height: 120%;
@@ -582,6 +642,7 @@ a.header__cartItemFill:hover span {
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
+	word-break: break-all;
 }
 
 .goods__brand {
@@ -592,6 +653,11 @@ a.header__cartItemFill:hover span {
 	font-weight: 400;
 	line-height: 120%;
 	margin-bottom: 8px;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	word-break: break-all;
 }
 
 .goods__desc {
@@ -599,6 +665,10 @@ a.header__cartItemFill:hover span {
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 140%;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }
 
 .goods__bottom {
@@ -706,6 +776,19 @@ a.header__cartItemFill:hover span {
 @media screen and (max-width: 1375px) {
 	.goods__card {
 		width: 100%;
+		height: 575px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.goods__card {
+		height: 550px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.goods__card {
+		height: 600px;
 	}
 }
 
@@ -724,13 +807,12 @@ a.header__cartItemFill:hover span {
 	}
 
 	.goods__card {
-		padding: 4px 4px 9px 4px;
-		height: 365px;
+		padding: 11px 9px 9px 9px;
+		height: 490px;
 	}
 
 	.goods__image {
 		border-radius: 2px;
-		height: 103px;
 		margin-bottom: 9px;
 	}
 
@@ -744,19 +826,20 @@ a.header__cartItemFill:hover span {
 	}
 
 	.goods__content {
-		margin-left: 5px;
-		margin-right: 5px;
+		margin-left: 2px;
+		margin-right: 2px;
 	}
 
 	.goods__card-title {
-		-webkit-line-clamp: 3;
+		-webkit-line-clamp: 2;
 		font-size: 13px;
-		margin-bottom: 7px;
+		margin-bottom: 5px;
 	}
 
 	.goods__brand {
-		font-size: 12px;
-		margin-bottom: 7px;
+		font-size: 11px;
+		margin-bottom: 9px;
+		-webkit-line-clamp: 1;
 	}
 
 	.goods__info {
@@ -777,7 +860,12 @@ a.header__cartItemFill:hover span {
 	}
 
 	.goods__newPrice {
-		font-size: 16px;
+		font-size: 14px;
+	}
+
+	.goods__price-left {
+		font-size: 11px;
+		line-height: 100%;
 	}
 
 	.goods__reviews {
@@ -790,10 +878,96 @@ a.header__cartItemFill:hover span {
 
 	.goods__price {
 		margin-bottom: 9.5px;
+		flex-direction: column-reverse;
+		align-items: normal;
+		gap: 10px;
+	}
+
+	.goods__price-right {
+		flex-direction: row-reverse;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 	.goods__btn {
 		padding: 11px;
+		font-size: 14px;
+	}
+
+	.goods__quantity {
+		padding: 11px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.goods__card {
+		height: 450px;
+	}
+}
+
+@media screen and (min-width: 577px) {
+	.goods__count {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.goods__card {
+		height: 360px;
+	}
+
+	.goods__oldPrice {
+		font-size: 10px;
+		line-height: 100%;
+	}
+
+	.goods__sale {
+		font-size: 10px;
+		line-height: 100%;
+	}
+
+	.goods__desc {
+		display: none;
+	}
+
+	.goods__stars-count {
+		font-size: 10px;
+		font-weight: 400;
+		line-height: 100%;
+	}
+
+	.goods__info {
+		height: 70px;
+	}
+
+	.goods__brand {
+		margin-bottom: 5px;
+	}
+
+	.goods__count {
+		color: #828282;
+		font-size: 10px;
+		font-weight: 400;
+		line-height: 100%;
+		display: -webkit-box;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.goods__card {
+		height: 320px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.goods__card {
+		height: 300px;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.goods__card {
+		padding: 3px;
 	}
 }
 
@@ -824,12 +998,12 @@ a.header__cartItemFill:hover span {
 
 .bannerBottom__inner h2 {
 	color: #822a27;
-	font-family: "Manrope", sans-serif;
+	/* font-family: "Manrope", sans-serif; */
 	font-size: 34px;
 	font-weight: 600;
 	line-height: 120%;
 	margin-bottom: 20px;
-	max-width: 300px;
+	max-width: 320px;
 }
 
 .bannerBottom__inner p {
@@ -883,8 +1057,8 @@ a.header__cartItemFill:hover span {
 @media screen and (max-width: 992px) {
 	.bannerBottom__inner h2 {
 		max-width: 100%;
-		font-size: 24px;
-		line-height: 110%;
+		font-size: 32px;
+		line-height: 100%;
 		margin-bottom: 10px;
 	}
 
@@ -1232,17 +1406,20 @@ a.header__cartItemFill:hover span {
 	border-radius: 3px;
 	cursor: pointer;
 	position: relative;
+	gap: 10px;
+}
+
+.mainSwiper .bannerMain__left {
+	max-width: 90px;
 }
 
 .mainSwiper .bannerMain__card h2 {
 	font-size: 8px;
-	max-width: 60px;
 	margin-bottom: 5px;
 }
 
 .mainSwiper .bannerMain__card p {
 	font-size: 4px;
-	max-width: 60px;
 	margin-bottom: 0px;
 }
 
@@ -1250,6 +1427,7 @@ a.header__cartItemFill:hover span {
 	font-size: 3px;
 	padding: 2px 4px;
 	border: 1px solid #822a27;
+	line-height: normal;
 }
 
 .mainSwiper .bannerMain__card .bannerMain__img {
@@ -1259,14 +1437,19 @@ a.header__cartItemFill:hover span {
 	bottom: 10px;
 }
 
+.mainSwiper .bannerMain__card-outer {
+	display: none;
+}
+
 .mainSwiper .swiper-slide-thumb-active .bannerMain__card-outer {
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: rgba(130, 42, 39, 0.5);
+	background: rgba(255, 255, 255, 0.5);
 	border-radius: 3px;
+	display: block;
 }
 
 .mainSwiper .swiper-slide-thumb-active .bannerMain__card-outer .bannerMain__card-scroll {
@@ -1274,8 +1457,8 @@ a.header__cartItemFill:hover span {
 	bottom: 0;
 	width: 0;
 	height: 4px;
-	border-radius: 0px 0px 0px 3px;
-	background: rgba(255, 255, 255, 0.8);
+	border-radius: 3px;
+	background: rgba(130, 42, 39, 0.9);
 	animation: scroll 5s linear;
 }
 
@@ -1322,13 +1505,25 @@ a.header__cartItemFill:hover span {
 .mainSwiper2 .swiper-main-prev img {
 	width: 20px;
 	height: 25px;
-	margin-right: 30px;
 }
 
 .mainSwiper2 .swiper-main-next img {
 	width: 20px;
 	height: 25px;
-	margin-left: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+	.mainSwiper2 .swiper-main-prev,
+	.mainSwiper2 .swiper-main-next {
+		width: 70px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.mainSwiper2 .swiper-main-prev,
+	.mainSwiper2 .swiper-main-next {
+		width: 40px;
+	}
 }
 
 @keyframes scroll {
@@ -1482,7 +1677,7 @@ a.header__cartItemFill:hover span {
 .detailMain__content h1 {
 	margin-bottom: 10px;
 	color: #822a27;
-	font-family: "Manrope", sans-serif;
+	/* font-family: "Manrope", sans-serif; */
 	font-size: 26px;
 	font-weight: 600;
 	line-height: 120%;
@@ -1923,6 +2118,10 @@ a.header__cartItemFill:hover span {
 	.swiper-pagination-detail {
 		display: none;
 	}
+
+	.swiper-pagination-wrapper {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -1978,6 +2177,12 @@ a.header__cartItemFill:hover span {
 	}
 }
 
+@media screen and (min-width: 577px) {
+	.swiper-pagination-main-wrapper {
+		display: none;
+	}
+}
+
 @media screen and (max-width: 576px) {
 	.breadcrumbs__inner {
 		gap: 5px;
@@ -1994,6 +2199,22 @@ a.header__cartItemFill:hover span {
 	.breadcrumbs__inner {
 		padding-top: 15px;
 		padding-bottom: 20px;
+	}
+
+	.swiper-pagination-main-wrapper {
+		display: flex;
+		justify-content: center;
+	}
+
+	.swiper-pagination-main .swiper-pagination-bullet {
+		background-color: #d9d9d9;
+		opacity: 1;
+		width: 7px;
+		height: 7px;
+	}
+
+	.swiper-pagination-main .swiper-pagination-bullet-active {
+		background-color: #822a27;
 	}
 }
 

@@ -297,6 +297,10 @@ document.addEventListener("DOMContentLoaded", () => {
           nextEl: ".swiper-main-next",
           prevEl: ".swiper-main-prev"
         },
+        pagination: {
+            el: '.swiper-pagination-main',
+            clickable: true,
+        },
         thumbs: {
           swiper: mainSwiper
         } 
@@ -534,4 +538,45 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.querySelector('.header__catalogNav-tablink[data-cat-tab="tabCat1"]')) {
         document.querySelector('.header__catalogNav-tablink[data-cat-tab="tabCat1"]').classList.add('active');
     }
+
+    // Скоролл
+
+    const header__nav = document.querySelector('.header__nav');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 150) {
+            header__nav.classList.add('disable');
+        } else {
+            header__nav.classList.remove('disable');
+        }
+    });
+
+    // Звездочки на товаре
+
+    const all_stars = document.querySelectorAll('.goods__stars');
+
+    if (window.innerWidth < 577 ) {
+        if (all_stars) {
+            all_stars.forEach(el => {
+                let stars = Array.from(el.children);
+                for (let i = 1; i < stars.length; i++) {
+                    stars[i].remove();
+                }
+           });
+        }
+    }
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 577 ) {
+            if (all_stars) {
+                all_stars.forEach(el => {
+                    let stars = Array.from(el.children);
+                    for (let i = 1; i < stars.length; i++) {
+                        stars[i].remove();
+                    }
+               });
+            }
+        }
+    })
+
 });
