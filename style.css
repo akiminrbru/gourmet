@@ -553,7 +553,7 @@ a.header__cartItemFill:hover span {
 
 .goods__title {
 	color: #15161c;
-	/* font-family: "Manrope", sans-serif; */
+	font-family: "Manrope", sans-serif;
 	font-size: 30px;
 	font-weight: 600;
 	line-height: 120%;
@@ -634,7 +634,7 @@ a.header__cartItemFill:hover span {
 
 .goods__card-title {
 	color: #822a27;
-	/* font-family: "Manrope", sans-serif; */
+	font-family: "Manrope", sans-serif;
 	font-size: 16px;
 	font-weight: 600;
 	line-height: 120%;
@@ -758,7 +758,7 @@ a.header__cartItemFill:hover span {
 	justify-content: space-between;
 	border-radius: 3px;
 	background: #f2f2f2;
-	padding: 15px 24px;
+	padding: 15.601px 24px;
 }
 
 .goods__quantity p {
@@ -896,7 +896,7 @@ a.header__cartItemFill:hover span {
 	}
 
 	.goods__quantity {
-		padding: 11px;
+		padding: 11.6px;
 	}
 }
 
@@ -999,7 +999,7 @@ a.header__cartItemFill:hover span {
 
 .bannerBottom__inner h2 {
 	color: #822a27;
-	/* font-family: "Manrope", sans-serif; */
+	font-family: "Manrope", sans-serif;
 	font-size: 34px;
 	font-weight: 600;
 	line-height: 120%;
@@ -1678,7 +1678,7 @@ a.header__cartItemFill:hover span {
 .detailMain__content h1 {
 	margin-bottom: 10px;
 	color: #822a27;
-	/* font-family: "Manrope", sans-serif; */
+	font-family: "Manrope", sans-serif;
 	font-size: 26px;
 	font-weight: 600;
 	line-height: 120%;

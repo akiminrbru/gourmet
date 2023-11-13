@@ -497,7 +497,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const enterBlockBuy = document.querySelector('.detailMain__buy');
     const backBlockBuy = document.querySelector('.detailMain__content');
 
-    if (placeBlockBuy) {
+
+    if (enterBlockBuy) {
         window.addEventListener('resize', function(event) {
             if (event.target.innerWidth < 577) {
                 placeBlockBuy.before(enterBlockBuy);
@@ -514,18 +515,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Блок покупки снизу экрана
 
-
     const buy_block = document.querySelector('.detailMain__buy');
     const footer_block = document.querySelector('.footer').offsetHeight;
     let distanctToFooter = document.body.scrollHeight - footer_block - window.innerHeight;
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > distanctToFooter) {
-            buy_block.classList.remove('detailMain__buyFixed');
-        } else {
-            buy_block.classList.add('detailMain__buyFixed');
-        }
-    });
+    if (buy_block) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > distanctToFooter) {
+                buy_block.classList.remove('detailMain__buyFixed');
+            } else {
+                buy_block.classList.add('detailMain__buyFixed');
+            }
+        });
+    }
 
     // Каталог
     
@@ -631,4 +633,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 
+    // Форматирование цены
+    
+    const goods__newPrice = document.querySelector('.goods__newPrice');
+    const goods__oldPrice = document.querySelector('.goods__oldPriceValue');
+
+    console.log(goods__oldPrice.innerHTML);
+    
+    if (goods__newPrice.innerHTML) {
+        goods__newPrice.innerHTML = Number(goods__newPrice.innerHTML.replaceAll(' ', '')).toLocaleString("ru-RU");
+    }
+
+    if (goods__oldPrice.innerHTML) {
+        goods__oldPrice.innerHTML = Number(goods__oldPrice.innerHTML.replaceAll(' ', '')).toLocaleString("ru-RU");
+    }
 });
