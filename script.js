@@ -420,6 +420,22 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
+    // Выпадашка для отзывов
+
+    const toogleReviewBtn = document.querySelectorAll('.detailMain__addition-reveiewPanel');
+
+    if (toogleReviewBtn) {
+        toogleReviewBtn.forEach(elem => {
+            elem.addEventListener('click', (e) => {
+                const currentArrow = e.target.lastElementChild;
+                const currentElem = e.target.parentNode.lastElementChild;
+                currentElem.classList.toggle('detailMain__reveiew-wrapperActive');
+                currentArrow.classList.toggle('detailMain__addition-imgActive');
+            })
+        })
+    }
+    
+
     // Табы на детальной
 
     const tabLinks = document.querySelectorAll(".detailMain__addition-tablink");

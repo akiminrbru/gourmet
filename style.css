@@ -2586,6 +2586,7 @@ a.header__cartItemFill:hover span {
 
 	.detailMain__top {
 		gap: 10px;
+		margin-bottom: 20px;
 	}
 
 	.detailMain__buy {
@@ -2631,6 +2632,10 @@ a.header__cartItemFill:hover span {
 		left: 0;
 		right: 0;
 		z-index: 1000;
+	}
+
+	.detailMain__addition-reveiewLeft {
+		display: none;
 	}
 }
 
@@ -2856,4 +2861,86 @@ a.header__cartItemFill:hover span {
 
 .header__catalogContent-links ul li a:hover {
 	color: #822a27;
+}
+
+/* Стрелка назад на детальной */
+
+.goback__inner {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.goback__link {
+	border-radius: 3px;
+	background: #f2f2f2;
+	padding: 11px 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	color: #15161c;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 145%;
+	text-decoration: none;
+}
+
+.goback__link img {
+	width: 9px;
+	height: 14px;
+}
+
+@media screen and (min-width: 577px) {
+	.goback {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.breadcrumbsDetail {
+		display: none;
+	}
+}
+
+/* Отзывы на мобилке */
+
+@media screen and (min-width: 577px) {
+	.detailMain__addition-reveiewImg {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.detailMain__addition-reveiewImg {
+		transition: transform 0.24s ease;
+	}
+
+	.detailMain__addition-reveiewPanel {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 15px;
+	}
+
+	.detailMain__addition-reveiewTitle {
+		margin-bottom: 0;
+	}
+
+	.detailMain__reveiew-wrapper {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.24s ease;
+	}
+
+	.detailMain__reveiew-wrapperActive {
+		max-height: 10000px;
+	}
+
+	.detailMain__addition-reveiewPanel .detailMain__addition-reveiewImg svg path {
+		transition: fill 0.24s ease;
+	}
+
+	.detailMain__addition-reveiewPanel:hover .detailMain__addition-reveiewImg svg path {
+		fill: #822a27;
+	}
 }
