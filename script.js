@@ -456,16 +456,16 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Перемещение блока на детальной странцие
 
-    const placeBlock = document.querySelector('.detailMain__left');
-    const enterBlock = document.querySelector('.detailMain__content');
-    const backBlock = document.querySelector('.detailMain__right');
+    const placeBlock = document.querySelector('.detailMain__content');
+    const enterBlock = document.querySelector('.detailMain__reviews');
+    const backBlock = document.querySelector('.detailMain__content');
 
     if (placeBlock) {
         window.addEventListener('resize', function(event) {
             if (event.target.innerWidth < 1101) {
                 placeBlock.prepend(enterBlock);
             } else {
-                backBlock.prepend(enterBlock);
+                backBlock.append(enterBlock);
             }
         }, true);
 
@@ -474,6 +474,42 @@ document.addEventListener("DOMContentLoaded", () => {
             placeBlock.prepend(enterBlock);
         }
     }    
+
+    // Перемещение блока (покупка) на детальной странцие
+
+    const placeBlockBuy = document.querySelector('.footer');
+    const enterBlockBuy = document.querySelector('.detailMain__buy');
+    const backBlockBuy = document.querySelector('.detailMain__content');
+
+    if (placeBlockBuy) {
+        window.addEventListener('resize', function(event) {
+            if (event.target.innerWidth < 577) {
+                placeBlockBuy.before(enterBlockBuy);
+            } else {
+                backBlockBuy.after(enterBlockBuy);
+            }
+        }, true);
+
+  
+        if (window.innerWidth < 577) {
+            placeBlockBuy.before(enterBlockBuy);
+        }
+    }    
+
+    // Блок покупки снизу экрана
+
+
+    const buy_block = document.querySelector('.detailMain__buy');
+    const footer_block = document.querySelector('.footer').offsetHeight;
+    let distanctToFooter = document.body.scrollHeight - footer_block - window.innerHeight;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > distanctToFooter) {
+            buy_block.classList.remove('detailMain__buyFixed');
+        } else {
+            buy_block.classList.add('detailMain__buyFixed');
+        }
+    });
 
     // Каталог
     
