@@ -2944,3 +2944,21 @@ a.header__cartItemFill:hover span {
 		fill: #822a27;
 	}
 }
+
+/* Catalog Page */
+
+.catalog__panel {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 50px;
+	margin-bottom: 27px;
+}
+
+.catalog__panel h1 {
+	color: #15161c;
+	font-family: "Manrope", sans-serif;
+	font-size: 34px;
+	font-weight: 600;
+	line-height: 120%;
+}
