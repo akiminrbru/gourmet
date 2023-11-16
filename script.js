@@ -651,8 +651,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const catalog_filter_btn = document.querySelectorAll('.catalog__filter-panel');
 
-    console.log(catalog_filter_btn);
-
     if (catalog_filter_btn.length != 0) {
         let arr = Array.from(catalog_filter_btn);
 
@@ -663,6 +661,34 @@ document.addEventListener("DOMContentLoaded", () => {
                 arrow.classList.toggle('active');
                 inner.classList.toggle('active');
                 console.log(e.target.parentNode.lastElementChild)
+            });
+        })
+    }
+
+    // Прокрутка тегов
+
+    const catalog__tags = document.querySelector('.catalog__tags-content');
+    const tags__left = document.querySelector('.catalog__tags-left');
+    const tags__right = document.querySelector('.catalog__tags-right');
+
+    // console.log(tags__left)
+    // console.log(tags__right)
+    
+    // catalog__tags.scroll(100)
+    if (tags__left) {
+        tags__left.addEventListener('click', () => {
+            catalog__tags.scrollBy({
+                left: -150,
+                behavior: "smooth",
+            });
+        })
+    }
+
+    if (tags__right) {
+        tags__right.addEventListener('click', () => {
+            catalog__tags.scrollBy({
+                left: 150,
+                behavior: "smooth",
             });
         })
     }

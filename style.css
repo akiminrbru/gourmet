@@ -3060,8 +3060,18 @@ a.header__cartItemFill:hover span {
 	border-bottom: 1px solid #e0e0e0;
 }
 
+.catalog__filter-name {
+	color: #15161c;
+	font-family: "Manrope", sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 120%;
+	pointer-events: none;
+}
+
 .catalog__filter-arrow {
 	transition: transform 0.24s ease;
+	pointer-events: none;
 }
 
 .catalog__filter-arrow.active {
@@ -3070,6 +3080,9 @@ a.header__cartItemFill:hover span {
 
 .catalog__right {
 	max-width: 1009px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
 .catalog__list {
@@ -3110,4 +3123,44 @@ a.header__cartItemFill:hover span {
 	background-position: center;
 	background-size: contain; */
 	content: url("images/ok.svg");
+}
+
+.catalog__addedFilters {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	flex-wrap: wrap;
+}
+
+.catalog__addedFilters-name {
+	color: #fff;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.catalog__addedFilters-image {
+	width: 21px;
+	height: 21px;
+	cursor: pointer;
+}
+
+.catalog__addedFilters-image svg {
+	display: block;
+}
+
+.catalog__addedFilters-item {
+	border-radius: 3px;
+	background: #822a27;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 8px 10px;
+}
+
+.catalog__addedFilters-itemClear {
+	background-color: #e0e0e0;
+}
+
+.catalog__addedFilters-itemClear .catalog__addedFilters-name {
+	color: #15161c;
 }
