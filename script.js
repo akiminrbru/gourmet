@@ -638,13 +638,33 @@ document.addEventListener("DOMContentLoaded", () => {
     const goods__newPrice = document.querySelector('.goods__newPrice');
     const goods__oldPrice = document.querySelector('.goods__oldPriceValue');
 
-    console.log(goods__oldPrice.innerHTML);
     
-    if (goods__newPrice.innerHTML) {
+    if (goods__newPrice && goods__newPrice.innerHTML) {
         goods__newPrice.innerHTML = Number(goods__newPrice.innerHTML.replaceAll(' ', '')).toLocaleString("ru-RU");
     }
 
-    if (goods__oldPrice.innerHTML) {
+    if (goods__oldPrice && goods__oldPrice.innerHTML) {
         goods__oldPrice.innerHTML = Number(goods__oldPrice.innerHTML.replaceAll(' ', '')).toLocaleString("ru-RU");
     }
+
+    // Каталог открытие фильтров
+
+    const catalog_filter_btn = document.querySelectorAll('.catalog__filter-panel');
+
+    console.log(catalog_filter_btn);
+
+    if (catalog_filter_btn.length != 0) {
+        let arr = Array.from(catalog_filter_btn);
+
+        arr.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                let arrow = e.target.lastElementChild;
+                let inner = e.target.parentNode.lastElementChild;
+                arrow.classList.toggle('active');
+                inner.classList.toggle('active');
+                console.log(e.target.parentNode.lastElementChild)
+            });
+        })
+    }
+
 });
