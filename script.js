@@ -560,39 +560,7 @@ document.addEventListener("DOMContentLoaded", () => {
             catalog.classList.remove('active');
         });
     }
-
-    // Табы в каталоге
-
-    const tabCatLinks = document.querySelectorAll(".header__catalogNav-tablink");
-    const tabCatContents = document.querySelectorAll(".header__catalogContent");
- 
-    tabCatLinks.forEach((tabLink) => {
-    tabLink.addEventListener("mouseover", function(e) {
-
-        // Скрываем все контенты
-        tabCatLinks.forEach((tabLink2) => {
-            tabLink2.classList.remove('active');
-        })
-        e.target.classList.add('active');
     
-        tabCatContents.forEach((content) => {
-            content.classList.remove('active');
-        });
-        // Находим соответствующий контент и показываем его
-        const tabId = this.getAttribute("data-cat-tab");
-            document.getElementById(tabId).classList.toggle('active');
-        });
-    });
-
-    // По умолчанию показать первую вкладку
-    if (document.getElementById("tabCat1")) {
-        document.getElementById("tabCat1").classList.add('active');
-    }
-
-    if (document.querySelector('.header__catalogNav-tablink[data-cat-tab="tabCat1"]')) {
-        document.querySelector('.header__catalogNav-tablink[data-cat-tab="tabCat1"]').classList.add('active');
-    }
-
     // Скоролл
 
     const header__nav = document.querySelector('.header__nav');
@@ -765,8 +733,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const goods__btn = document.querySelectorAll('.goods__btn');
     const goods__quantity = document.querySelector('.goods__quantity');
 
-
-
     if (goods__btn.length != 0) {
         goods__btn.forEach(btn => {
             btn.addEventListener('click', (e) => {
@@ -776,4 +742,89 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         })
     }
+
+    // Табы в каталоге
+
+    const tabCatLinks = document.querySelectorAll(".header__catalogNav-tablink");
+    const tabCatContents = document.querySelectorAll(".header__catalogContent");
+ 
+    tabCatLinks.forEach((tabLink) => {
+    tabLink.addEventListener("mouseover", function(e) {
+
+        // Скрываем все контенты
+        tabCatLinks.forEach((tabLink2) => {
+            tabLink2.classList.remove('active');
+        })
+        e.target.classList.add('active');
+    
+        tabCatContents.forEach((content) => {
+            content.classList.remove('active');
+        });
+        // Находим соответствующий контент и показываем его
+        const tabId = this.getAttribute("data-cat-tab");
+            document.getElementById(tabId).classList.toggle('active');
+        });
+    });
+
+    // window.addEventListener('resize', () => {
+    //     if (window.innerWidth > 993) {
+    //         // По умолчанию показать первую вкладку
+    //         if (document.getElementById("tabCat1")) {
+    //             document.getElementById("tabCat1").classList.add('active');
+    //         }
+    //         if (document.querySelector('.header__catalogNav-tablink[data-cat-tab="tabCat1"]')) {
+    //             document.querySelector('.header__catalogNav-tablink[data-cat-tab="tabCat1"]').classList.add('active');
+    //         }
+    //     } else {
+    //         if (document.getElementById("tabCat1")) {
+    //             document.getElementById("tabCat1").classList.remove('active');
+    //         }
+    //         if (document.querySelector('.header__catalogNav-tablink[data-cat-tab="tabCat1"]')) {
+    //             document.querySelector('.header__catalogNav-tablink[data-cat-tab="tabCat1"]').classList.remove('active');
+    //         }
+    //     }
+    // });
+
+    // if (window.innerWidth > 993) {
+    //     // По умолчанию показать первую вкладку
+    //     if (document.getElementById("tabCat1")) {
+    //         document.getElementById("tabCat1").classList.add('active');
+    //     }
+    //     if (document.querySelector('.header__catalogNav-tablink[data-cat-tab="tabCat1"]')) {
+    //         document.querySelector('.header__catalogNav-tablink[data-cat-tab="tabCat1"]').classList.add('active');
+    //     }
+    // } else {
+    //     if (document.getElementById("tabCat1")) {
+    //         document.getElementById("tabCat1").classList.remove('active');
+    //     }
+    //     if (document.querySelector('.header__catalogNav-tablink[data-cat-tab="tabCat1"]')) {
+    //         document.querySelector('.header__catalogNav-tablink[data-cat-tab="tabCat1"]').classList.remove('active');
+    //     }
+    // }
+
+    // Бургер меню
+
+    const burger_btn = document.querySelector('.header__burger-btn');
+    const catalog_mobile = document.querySelector('.header__catalog');
+    const catalogContent_back = document.querySelectorAll('.header__catalogContent-back');
+
+
+    if (burger_btn) {
+        burger_btn.addEventListener('click', () => {
+            burger_btn.classList.toggle('active');
+            catalog_mobile.classList.toggle('active');
+            body_block.classList.toggle('active');
+        });
+    }
+
+    if (catalogContent_back.length != 0) {
+        catalogContent_back.forEach(back => {
+            console.log(back.parentNode)
+            back.addEventListener('click', (e) => {
+                let content_catalog = e.target.parentNode;
+                content_catalog.classList.remove('active');
+            });
+        });
+    }
+
 });
