@@ -693,4 +693,87 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
+    // Открытие фильтра 
+
+    const filter_btn = document.querySelector('.catalog__filter-btn');
+    const filter_wrapper = document.querySelector('.catalog__filter-wrapper');
+    const filter_close = document.querySelector('.catalog__filter-close');
+    const body_block = document.querySelector('body');
+    const filter_back = document.querySelector('.catalog__filter-blackout');
+    const filter__apply = document.querySelector('.catalog__filter-apply');
+    const filter__reset = document.querySelector('.catalog__filter-reset');
+
+    if (filter_btn) {
+        filter_btn.addEventListener('click', () => {
+            filter_wrapper.classList.add('active');
+            body_block.classList.add('active');
+            filter_back.classList.add('active');
+        });
+    }
+
+    if (filter_close) {
+        filter_close.addEventListener('click', () => {
+            filter_wrapper.classList.remove('active');
+            body_block.classList.remove('active');
+            filter_back.classList.remove('active');
+        });
+    }
+
+    if (filter__apply) {
+        filter__apply.addEventListener('click', () => {
+            filter_wrapper.classList.remove('active');
+            body_block.classList.remove('active');
+            filter_back.classList.remove('active');
+        });
+    }
+    
+    if (filter__reset) {
+        filter__reset.addEventListener('click', () => {
+            filter_wrapper.classList.remove('active');
+            body_block.classList.remove('active');
+            filter_back.classList.remove('active');
+        });
+    }
+
+    // Выпадающий список в каталоге
+
+    const droplist_btn = document.querySelector('.catalog__droplist');
+    const catalog__dropdown = document.querySelector('.catalog__dropdown');
+
+    if (droplist_btn) {
+        droplist_btn.addEventListener('click', () => {
+            catalog__dropdown.classList.toggle('active');
+            droplist_btn.classList.toggle('active');
+        });
+    }
+
+    const dropdown_items = document.querySelectorAll('.catalog__dropdown-item');
+    const dropdown_item_current = document.querySelector('.catalog__droplist-current');
+
+    if (dropdown_items != 0) {
+        dropdown_items.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                let elem = e.target.firstElementChild;
+                elem.before(dropdown_item_current.firstElementChild);
+                dropdown_item_current.append(elem);
+            });
+        })
+    }
+
+    // Кнопка добавить в корзину
+
+    const goods__btn = document.querySelectorAll('.goods__btn');
+    const goods__quantity = document.querySelector('.goods__quantity');
+
+
+
+    if (goods__btn.length != 0) {
+        goods__btn.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                let quantity = e.target.parentNode.querySelector('.goods__quantity');
+                quantity.classList.add('active');
+                e.target.classList.add('disable');
+            });
+        })
+    }
 });
