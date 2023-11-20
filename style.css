@@ -276,6 +276,7 @@ a.header__cartItemFill:hover span {
 	height: 24px;
 	background-size: cover;
 	transition: background-image 0.24s ease;
+	display: block;
 }
 
 .header__burger-btn.active {
@@ -310,6 +311,10 @@ a.header__cartItemFill:hover span {
 
 @media screen and (min-width: 993px) {
 	.header__burger-btn {
+		display: none;
+	}
+
+	.header__burger-btnClose {
 		display: none;
 	}
 
@@ -2788,7 +2793,7 @@ a.header__cartItemFill:hover span {
 	background: #bdbdbd;
 }
 
-.header__catalogNav ul {
+.header__catalogSubContent {
 	list-style-type: none;
 	display: flex;
 	flex-direction: column;
@@ -3673,6 +3678,10 @@ a.header__cartItemFill:hover span {
 	.header__catalogContent-back {
 		display: none;
 	}
+
+	.header__catalogNav-panel {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 992px) {
@@ -3752,6 +3761,19 @@ a.header__cartItemFill:hover span {
 		padding: 0;
 		max-height: 100%;
 		overflow-y: visible;
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		width: 100%;
+	}
+
+	.header__catalogNav ul {
+		padding: 25px;
+		padding-bottom: 75px;
+		height: 100%;
+		overflow: scroll;
 	}
 
 	.header__catalogNav-tablink.active {
@@ -3764,11 +3786,50 @@ a.header__cartItemFill:hover span {
 		color: #4f4e57;
 		font-size: 14px;
 		font-weight: 500;
+		font-size: 14px;
+	}
+
+	.header__catalogNav-panel {
+		width: 100%;
+		padding: 20px 25px;
+		display: flex;
+		gap: 12px;
+		border-bottom: 1px solid #e0e0e0;
+	}
+
+	.header__catalogSubNav-tablink {
+		color: #15161c;
+		font-size: 13px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	.header__catalogSubNav-tablink.active {
+		color: #822a27;
+		border-bottom: 1px solid #822a27;
+	}
+
+	.header__catalogSubContent {
+		display: none;
+	}
+
+	.header__catalogSubContent.active {
+		display: flex;
 	}
 }
 
 @media screen and (max-width: 576px) {
 	.header__catalog {
 		top: 65px;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	.header__catalogNav-panel {
+		overflow-x: auto;
+	}
+
+	.header__catalogNav-panel::-webkit-scrollbar {
+		display: none;
 	}
 }
