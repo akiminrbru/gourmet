@@ -17,7 +17,7 @@
 				<div class="header__panel">
 					<div class="header__panel-inner">
 						<div class="header__logo-wrapper">
-							<button class="header__burgerOpen"><img src="images/menu.svg" alt="burgerMenu" /></button>
+							<button class="header__burger-btn"></button>
 							<div class="header__logo">
 								<img src="images/logo.svg" alt="logo" />
 							</div>
@@ -30,7 +30,13 @@
 							<div class="container">
 								<div class="header__catalog-inner">
 									<div class="header__catalogNav">
-										<ul>
+										<div class="header__catalogNav-panel">
+											<div class="header__catalogSubNav-tablink active" data-sub-tab="tabSubCat1">КАТАЛОГ</div>
+											<div class="header__catalogSubNav-tablink" data-sub-tab="tabSubCat2">КЛИЕНТАМ</div>
+											<div class="header__catalogSubNav-tablink" data-sub-tab="tabSubCat3">БИЗНЕСУ</div>
+											<div class="header__catalogSubNav-tablink" data-sub-tab="tabSubCat4">ИНФОРМАЦИЯ</div>
+										</div>
+										<ul class="header__catalogSubContent active" id="tabSubCat1">
 											<li><a class="header__catalogNav-tablink" data-cat-tab="tabCat1" href="#">ЭЛИТНЫЕ СЫРЫ</a></li>
 											<li><a class="header__catalogNav-tablink" data-cat-tab="tabCat2" href="#">МЯСНАЯ ГАСТРОНОМИЯ</a></li>
 											<li><a class="header__catalogNav-tablink" data-cat-tab="tabCat3" href="#">РЫБНАЯ ГАСТРОНОМИЯ</a></li>
@@ -50,8 +56,30 @@
 											<li><a class="header__catalogNav-tablink" data-cat-tab="tabCat17" href="#">ПОДАРКИ И НАБОРЫ</a></li>
 											<li><a class="header__catalogNav-tablink" data-cat-tab="tabCat18" href="#">АКСЕССУАРЫ И УПАКОВКА</a></li>
 										</ul>
+										<ul class="header__catalogSubContent" id="tabSubCat2">
+											<li><a href="#">Акции и скидки %</a></li>
+											<li><a href="#">Доставка и оплата</a></li>
+											<li><a href="#">Клуб Gourmet</a></li>
+										</ul>
+										<ul class="header__catalogSubContent" id="tabSubCat3">
+											<li><a href="#">Корпоративным клиентам</a></li>
+											<li><a href="#">Поставщикам</a></li>
+											<li><a href="#">Аренда</a></li>
+											<li><a href="#">Вакансии</a></li>
+										</ul>
+										<ul class="header__catalogSubContent" id="tabSubCat4">
+											<li><a href="#">О компании</a></li>
+											<li><a href="#">Адреса магазинов</a></li>
+											<li><a href="#">Реквизиты</a></li>
+											<li><a href="#">Условия и соглашения</a></li>
+											<li><a href="#">Вакансии</a></li>
+										</ul>
 									</div>
 									<div class="header__catalogContent" id="tabCat1">
+										<div class="header__catalogContent-back">
+											<img src="images/arrow-back.svg" alt="back" />
+											<span>ЭЛИТНЫЕ СЫРЫ</span>
+										</div>
 										<div class="header__catalogContent-item">
 											<div class="header__catalogContent-title">
 												<a href="#">Популярные категории</a>
@@ -106,6 +134,10 @@
 										</div>
 									</div>
 									<div class="header__catalogContent" id="tabCat2">
+										<div class="header__catalogContent-back">
+											<img src="images/arrow-back.svg" alt="back" />
+											<span>МЯСНАЯ ГАСТРОНОМИЯ</span>
+										</div>
 										<div class="header__catalogContent-item">
 											<div class="header__catalogContent-title">
 												<a href="#">Популярные категории</a>
@@ -182,6 +214,10 @@
 										</div>
 									</div>
 									<div class="header__catalogContent" id="tabCat3">
+										<div class="header__catalogContent-back">
+											<img src="images/arrow-back.svg" alt="back" />
+											<span>РЫБНАЯ ГАСТРОНОМИЯ</span>
+										</div>
 										<div class="header__catalogContent-item">
 											<div class="header__catalogContent-title">
 												<a href="#">РЫБНАЯ ГАСТРОНОМИЯ</a>
@@ -190,6 +226,10 @@
 										</div>
 									</div>
 									<div class="header__catalogContent" id="tabCat4">
+										<div class="header__catalogContent-back">
+											<img src="images/arrow-back.svg" alt="back" />
+											<span>АНТИПАСТИ</span>
+										</div>
 										<div class="header__catalogContent-item">
 											<div class="header__catalogContent-title">
 												<a href="#">АНТИПАСТИ</a>
@@ -198,6 +238,10 @@
 										</div>
 									</div>
 									<div class="header__catalogContent" id="tabCat5">
+										<div class="header__catalogContent-back">
+											<img src="images/arrow-back.svg" alt="back" />
+											<span>ГАСТРОНОМИЧЕСКИЕ СЕТЫ</span>
+										</div>
 										<div class="header__catalogContent-item">
 											<div class="header__catalogContent-title">
 												<a href="#">ГАСТРОНОМИЧЕСКИЕ СЕТЫ</a>
@@ -206,6 +250,10 @@
 										</div>
 									</div>
 									<div class="header__catalogContent" id="tabCat6">
+										<div class="header__catalogContent-back">
+											<img src="images/arrow-back.svg" alt="back" />
+											<span>ПАСТА И РИЗОТТО</span>
+										</div>
 										<div class="header__catalogContent-item">
 											<div class="header__catalogContent-title">
 												<a href="#">ПАСТА И РИЗОТТО</a>
@@ -214,6 +262,10 @@
 										</div>
 									</div>
 									<div class="header__catalogContent" id="tabCat7">
+										<div class="header__catalogContent-back">
+											<img src="images/arrow-back.svg" alt="back" />
+											<span>ТРЮФЕЛИ</span>
+										</div>
 										<div class="header__catalogContent-item">
 											<div class="header__catalogContent-title">
 												<a href="#">ТРЮФЕЛИ</a>
@@ -222,6 +274,10 @@
 										</div>
 									</div>
 									<div class="header__catalogContent" id="tabCat8">
+										<div class="header__catalogContent-back">
+											<img src="images/arrow-back.svg" alt="back" />
+											<span>ИЗДЕЛИЯ ИЗ ЗЛАКОВ</span>
+										</div>
 										<div class="header__catalogContent-item">
 											<div class="header__catalogContent-title">
 												<a href="#">ИЗДЕЛИЯ ИЗ ЗЛАКОВ</a>
@@ -230,6 +286,10 @@
 										</div>
 									</div>
 									<div class="header__catalogContent" id="tabCat9">
+										<div class="header__catalogContent-back">
+											<img src="images/arrow-back.svg" alt="back" />
+											<span>МАСЛА И УКСУСЫ</span>
+										</div>
 										<div class="header__catalogContent-item">
 											<div class="header__catalogContent-title">
 												<a href="#">МАСЛА И УКСУСЫ</a>
@@ -238,6 +298,10 @@
 										</div>
 									</div>
 									<div class="header__catalogContent" id="tabCat10">
+										<div class="header__catalogContent-back">
+											<img src="images/arrow-back.svg" alt="back" />
+											<span>СОУСЫ И НАМАЗКИ</span>
+										</div>
 										<div class="header__catalogContent-item">
 											<div class="header__catalogContent-title">
 												<a href="#">СОУСЫ И НАМАЗКИ</a>
@@ -246,6 +310,10 @@
 										</div>
 									</div>
 									<div class="header__catalogContent" id="tabCat11">
+										<div class="header__catalogContent-back">
+											<img src="images/arrow-back.svg" alt="back" />
+											<span>СПЕЦИИ И ПРИПРАВЫ</span>
+										</div>
 										<div class="header__catalogContent-item">
 											<div class="header__catalogContent-title">
 												<a href="#">СПЕЦИИ И ПРИПРАВЫ</a>
@@ -254,6 +322,10 @@
 										</div>
 									</div>
 									<div class="header__catalogContent" id="tabCat12">
+										<div class="header__catalogContent-back">
+											<img src="images/arrow-back.svg" alt="back" />
+											<span>МОЛОЧНЫЕ ПРОДУКТЫ</span>
+										</div>
 										<div class="header__catalogContent-item">
 											<div class="header__catalogContent-title">
 												<a href="#">МОЛОЧНЫЕ ПРОДУКТЫ</a>
@@ -262,6 +334,10 @@
 										</div>
 									</div>
 									<div class="header__catalogContent" id="tabCat13">
+										<div class="header__catalogContent-back">
+											<img src="images/arrow-back.svg" alt="back" />
+											<span>КОНФЕТЫ И СЛАДОСТИ</span>
+										</div>
 										<div class="header__catalogContent-item">
 											<div class="header__catalogContent-title">
 												<a href="#">КОНФЕТЫ И СЛАДОСТИ</a>
@@ -270,6 +346,10 @@
 										</div>
 									</div>
 									<div class="header__catalogContent" id="tabCat14">
+										<div class="header__catalogContent-back">
+											<img src="images/arrow-back.svg" alt="back" />
+											<span>МЕД И ВАРЕНЬЯ</span>
+										</div>
 										<div class="header__catalogContent-item">
 											<div class="header__catalogContent-title">
 												<a href="#">МЕД И ВАРЕНЬЯ</a>
@@ -278,6 +358,10 @@
 										</div>
 									</div>
 									<div class="header__catalogContent" id="tabCat15">
+										<div class="header__catalogContent-back">
+											<img src="images/arrow-back.svg" alt="back" />
+											<span>ЧАЙ И КОФЕ</span>
+										</div>
 										<div class="header__catalogContent-item">
 											<div class="header__catalogContent-title">
 												<a href="#">ЧАЙ И КОФЕ</a>
@@ -286,6 +370,10 @@
 										</div>
 									</div>
 									<div class="header__catalogContent" id="tabCat16">
+										<div class="header__catalogContent-back">
+											<img src="images/arrow-back.svg" alt="back" />
+											<span>НАПИТКИ</span>
+										</div>
 										<div class="header__catalogContent-item">
 											<div class="header__catalogContent-title">
 												<a href="#">НАПИТКИ</a>
@@ -294,6 +382,10 @@
 										</div>
 									</div>
 									<div class="header__catalogContent" id="tabCat17">
+										<div class="header__catalogContent-back">
+											<img src="images/arrow-back.svg" alt="back" />
+											<span>ПОДАРКИ И НАБОРЫ</span>
+										</div>
 										<div class="header__catalogContent-item">
 											<div class="header__catalogContent-title">
 												<a href="#">ПОДАРКИ И НАБОРЫ</a>
@@ -302,6 +394,10 @@
 										</div>
 									</div>
 									<div class="header__catalogContent" id="tabCat18">
+										<div class="header__catalogContent-back">
+											<img src="images/arrow-back.svg" alt="back" />
+											<span>АКСЕССУАРЫ И УПАКОВКА</span>
+										</div>
 										<div class="header__catalogContent-item">
 											<div class="header__catalogContent-title">
 												<a href="#">АКСЕССУАРЫ И УПАКОВКА</a>
