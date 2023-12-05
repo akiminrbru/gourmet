@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Слайдер акции
-    const swiperGoods1 = new Swiper('.swiperGoods1', {
+    const swiperGoods1 = new Swiper('.zswiperGoods1', {
         direction: 'horizontal',
         slidesPerView: 4,
         spaceBetween: 18,
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Слайдер Хиты
-    const swiperGoods2 = new Swiper('.swiperGoods2', {
+    const swiperGoods2 = new Swiper('.zswiperGoods2', {
         direction: 'horizontal',
         slidesPerView: 4,
         spaceBetween: 18,
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Слайдер новинки
-    const swiperGoods3 = new Swiper('.swiperGoods3', {
+    const swiperGoods3 = new Swiper('.zswiperGoods3', {
         direction: 'horizontal',
         slidesPerView: 4,
         spaceBetween: 18,
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Слайдер рекомендуем
-    const swiperGoods4 = new Swiper('.swiperGoods4', {
+    const swiperGoods4 = new Swiper('.zswiperGoods4', {
         direction: 'horizontal',
         slidesPerView: 4,
         spaceBetween: 18,
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Слайдер Идеальные сочетания
-    const swiperGoods5 = new Swiper('.swiperGoods5', {
+    const swiperGoods5 = new Swiper('.zswiperGoods5', {
         direction: 'horizontal',
         slidesPerView: 4,
         spaceBetween: 18,
@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Слайдер Идеальные сочетания
-    const swiperGoods6 = new Swiper('.swiperGoods6', {
+    const swiperGoods6 = new Swiper('.zswiperGoods6', {
         direction: 'horizontal',
         slidesPerView: 4,
         spaceBetween: 18,
@@ -258,7 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Главный баннер
 
-    const mainSwiper = new Swiper(".mainSwiper", {
+    const mainSwiper = new Swiper(".zmainSwiper", {
         loop: true,
         spaceBetween: 60,
         slidesPerView: 5,
@@ -287,7 +287,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
       });
-    const mainSwiper2 = new Swiper(".mainSwiper2", {
+    const mainSwiper2 = new Swiper(".zmainSwiper2", {
         loop: true,
         spaceBetween: 10,
         autoplay: {
@@ -298,7 +298,7 @@ document.addEventListener("DOMContentLoaded", () => {
           prevEl: ".swiper-main-prev"
         },
         pagination: {
-            el: '.swiper-pagination-main',
+            el: '.zswiper-pagination-main',
             clickable: true,
         },
         thumbs: {
@@ -320,7 +320,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Детальный баннер
 
-    const detailSwiper = new Swiper(".detailSwiper", {
+    const detailSwiper = new Swiper(".zdetailSwiper", {
         direction: 'vertical',
         loop: true,
         spaceBetween: 20,
@@ -329,11 +329,11 @@ document.addEventListener("DOMContentLoaded", () => {
         watchSlidesProgress: true
       });
 
-    const detailSwiper2 = new Swiper(".detailSwiper2", {
+    const detailSwiper2 = new Swiper(".zdetailSwiper2", {
         spaceBetween: 20,
         loop: true,
         pagination: {
-            el: '.swiper-pagination-detail',
+            el: '.zswiper-pagination-detail',
             clickable: true,
         },
         thumbs: {
@@ -355,9 +355,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Перемещение элемента в футере
 
-    const place = document.querySelector('.footer__content');
-    const enter = document.querySelector('.footer__links');
-    const back = document.querySelector('.footer__btn');
+    const place = document.querySelector('.zfooter__content');
+    const enter = document.querySelector('.zfooter__links');
+    const back = document.querySelector('.zfooter__btn');
 
     if (place) {
         window.addEventListener('resize', function(event) {
@@ -376,37 +376,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Выпадашки в футере
 
-    const elements = document.querySelectorAll('.footer__nav-toggle');
+    const elements = document.querySelectorAll('.zfooter__nav-toggle');
     
     if (elements) {
         elements.forEach(el => {
             el.addEventListener('click', (e) => {
                 const elemBtn = e.target.lastElementChild;
                 const elemUl = e.target.parentNode.lastElementChild;
-                elemUl.classList.toggle('footer__nav-listOpen');
-                elemBtn.classList.toggle('footer__nav-arrow-active')
+                elemUl.classList.toggle('zfooter__nav-listOpen');
+                elemBtn.classList.toggle('zfooter__nav-arrow-active')
             })
         })
     }
 
     // Выпадашки на детальной
 
-    const toogleDescBtn = document.querySelectorAll('.detailMain__desc-panel');
+    const toogleDescBtn = document.querySelectorAll('.zdetailMain__desc-panel');
 
     if (toogleDescBtn) {
         toogleDescBtn.forEach(elem => {
             elem.addEventListener('click', (e) => {
                 const currentArrow = e.target.lastElementChild;
                 const currentElem = e.target.parentNode.lastElementChild;
-                currentElem.classList.toggle('detailMain__desc-content-active');
-                currentArrow.classList.toggle('detailMain__desc-toggle-active');
+                currentElem.classList.toggle('zdetailMain__desc-content-active');
+                currentArrow.classList.toggle('zdetailMain__desc-toggle-active');
             })
         })
     }
 
     // Выпадашки на детальной2 (допольнительные)
 
-    const toogleAdditionBtn = document.querySelectorAll('.detailMain__addition-panel');
+    const toogleAdditionBtn = document.querySelectorAll('.zdetailMain__addition-panel');
 
 
     if (toogleAdditionBtn) {
@@ -414,23 +414,23 @@ document.addEventListener("DOMContentLoaded", () => {
             elem.addEventListener('click', (e) => {
                 const currentArrow = e.target.lastElementChild;
                 const currentElem = e.target.parentNode.lastElementChild.firstElementChild;
-                currentElem.classList.toggle('detailMain__addition-listActive');
-                currentArrow.classList.toggle('detailMain__addition-imgActive');
+                currentElem.classList.toggle('zdetailMain__addition-listActive');
+                currentArrow.classList.toggle('zdetailMain__addition-imgActive');
             })
         })
     }
 
     // Выпадашка для отзывов
 
-    const toogleReviewBtn = document.querySelectorAll('.detailMain__addition-reveiewPanel');
+    const toogleReviewBtn = document.querySelectorAll('.zdetailMain__addition-reveiewPanel');
 
     if (toogleReviewBtn) {
         toogleReviewBtn.forEach(elem => {
             elem.addEventListener('click', (e) => {
                 const currentArrow = e.target.lastElementChild;
                 const currentElem = e.target.parentNode.lastElementChild;
-                currentElem.classList.toggle('detailMain__reveiew-wrapperActive');
-                currentArrow.classList.toggle('detailMain__addition-imgActive');
+                currentElem.classList.toggle('zdetailMain__reveiew-wrapperActive');
+                currentArrow.classList.toggle('zdetailMain__addition-imgActive');
             })
         })
     }
@@ -438,43 +438,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Табы на детальной
 
-    const tabLinks = document.querySelectorAll(".detailMain__addition-tablink");
-    const tabContents = document.querySelectorAll(".detailMain__addition-tabcontent");
+    const tabLinks = document.querySelectorAll(".zdetailMain__addition-tablink");
+    const tabContents = document.querySelectorAll(".zdetailMain__addition-tabcontent");
 
     tabLinks.forEach((tabLink) => {
         tabLink.addEventListener("click", function(e) {
         // Скрываем все контенты
 
         tabLinks.forEach((tabLink2) => {
-            tabLink2.classList.remove('detailMain__addition-tablinkActive');
+            tabLink2.classList.remove('zdetailMain__addition-tablinkActive');
         })
 
-        e.target.classList.add('detailMain__addition-tablinkActive');
+        e.target.classList.add('zdetailMain__addition-tablinkActive');
 
         tabContents.forEach(function(content) {
-            content.classList.remove('detailMain__addition-tabcontentActive');
+            content.classList.remove('zdetailMain__addition-tabcontentActive');
         });
 
         // Находим соответствующий контент и показываем его
         const tabId = this.getAttribute("data-tab");
-        document.getElementById(tabId).classList.toggle('detailMain__addition-tabcontentActive');
+        document.getElementById(tabId).classList.toggle('zdetailMain__addition-tabcontentActive');
         });
     });
 
         // По умолчанию показать первую вкладку
     if (document.getElementById("tab1")) {
-        document.getElementById("tab1").classList.add('detailMain__addition-tabcontentActive');
+        document.getElementById("tab1").classList.add('zdetailMain__addition-tabcontentActive');
     }
     
-    if ( document.querySelector('.detailMain__addition-tablink[data-tab="tab1"]')) {
-        document.querySelector('.detailMain__addition-tablink[data-tab="tab1"]').classList.add('detailMain__addition-tablinkActive');
+    if ( document.querySelector('.zdetailMain__addition-tablink[data-tab="tab1"]')) {
+        document.querySelector('.zdetailMain__addition-tablink[data-tab="tab1"]').classList.add('zdetailMain__addition-tablinkActive');
     }
     
     // Перемещение блока на детальной странцие
 
-    const placeBlock = document.querySelector('.detailMain__content');
-    const enterBlock = document.querySelector('.detailMain__reviews');
-    const backBlock = document.querySelector('.detailMain__content');
+    const placeBlock = document.querySelector('.zdetailMain__content');
+    const enterBlock = document.querySelector('.zdetailMain__reviews');
+    const backBlock = document.querySelector('.zdetailMain__content');
 
     if (placeBlock) {
         window.addEventListener('resize', function(event) {
@@ -493,9 +493,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Перемещение блока (покупка) на детальной странцие
 
-    const placeBlockBuy = document.querySelector('.footer');
-    const enterBlockBuy = document.querySelector('.detailMain__buy');
-    const backBlockBuy = document.querySelector('.detailMain__content');
+    const placeBlockBuy = document.querySelector('.zfooter');
+    const enterBlockBuy = document.querySelector('.zdetailMain__buy');
+    const backBlockBuy = document.querySelector('.zdetailMain__content');
 
 
     if (enterBlockBuy) {
@@ -515,25 +515,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Блок покупки снизу экрана
 
-    const buy_block = document.querySelector('.detailMain__buy');
-    const footer_block = document.querySelector('.footer').offsetHeight;
+    const buy_block = document.querySelector('.zdetailMain__buy');
+    const footer_block = document.querySelector('.zfooter').offsetHeight;
     let distanctToFooter = document.body.scrollHeight - footer_block - window.innerHeight;
 
     if (buy_block) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > distanctToFooter) {
-                buy_block.classList.remove('detailMain__buyFixed');
+                buy_block.classList.remove('zdetailMain__buyFixed');
             } else {
-                buy_block.classList.add('detailMain__buyFixed');
+                buy_block.classList.add('zdetailMain__buyFixed');
             }
         });
     }
 
     // Каталог
     
-    const catalogBtn = document.querySelector('.header__catalogBtn');
-    const catalog = document.querySelector('.header__catalog');
-    const header__search = document.querySelector('.header__search');
+    const catalogBtn = document.querySelector('.zheader__catalogBtn');
+    const catalog = document.querySelector('.zheader__catalog');
+    const header__search = document.querySelector('.zheader__search');
 
     if (catalogBtn) {
         catalogBtn.addEventListener('mouseenter', () => {
@@ -584,7 +584,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Скоролл
 
-    const header__nav = document.querySelector('.header__nav');
+    const header__nav = document.querySelector('.zheader__nav');
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 150) {
@@ -596,7 +596,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Звездочки на товаре
 
-    const all_stars = document.querySelectorAll('.goods__stars');
+    const all_stars = document.querySelectorAll('.zgoods__stars');
 
     if (window.innerWidth < 577 ) {
         if (all_stars) {
@@ -624,8 +624,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Форматирование цены
     
-    const goods__newPrice = document.querySelector('.goods__newPrice');
-    const goods__oldPrice = document.querySelector('.goods__oldPriceValue');
+    const goods__newPrice = document.querySelector('.zgoods__newPrice');
+    const goods__oldPrice = document.querySelector('.zgoods__oldPriceValue');
 
     
     if (goods__newPrice && goods__newPrice.innerHTML) {
@@ -638,7 +638,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Каталог открытие фильтров
 
-    const catalog_filter_btn = document.querySelectorAll('.catalog__filter-panel');
+    const catalog_filter_btn = document.querySelectorAll('.zcatalog__filter-panel');
 
     if (catalog_filter_btn.length != 0) {
         let arr = Array.from(catalog_filter_btn);
@@ -649,16 +649,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 let inner = e.target.parentNode.lastElementChild;
                 arrow.classList.toggle('active');
                 inner.classList.toggle('active');
-                console.log(e.target.parentNode.lastElementChild)
+                // console.log(e.target.parentNode.lastElementChild)
             });
         })
     }
 
     // Прокрутка тегов
 
-    const catalog__tags = document.querySelector('.catalog__tags-content');
-    const tags__left = document.querySelector('.catalog__tags-left');
-    const tags__right = document.querySelector('.catalog__tags-right');
+    const catalog__tags = document.querySelector('.zcatalog__tags-content');
+    const tags__left = document.querySelector('.zcatalog__tags-left');
+    const tags__right = document.querySelector('.zcatalog__tags-right');
 
     // console.log(tags__left)
     // console.log(tags__right)
@@ -684,13 +684,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Открытие фильтра 
 
-    const filter_btn = document.querySelector('.catalog__filter-btn');
-    const filter_wrapper = document.querySelector('.catalog__filter-wrapper');
-    const filter_close = document.querySelector('.catalog__filter-close');
+    const filter_btn = document.querySelector('.zcatalog__filter-btn');
+    const filter_wrapper = document.querySelector('.zcatalog__filter-wrapper');
+    const filter_close = document.querySelector('.zcatalog__filter-close');
     const body_block = document.querySelector('body');
-    const filter_back = document.querySelector('.catalog__filter-blackout');
-    const filter__apply = document.querySelector('.catalog__filter-apply');
-    const filter__reset = document.querySelector('.catalog__filter-reset');
+    const filter_back = document.querySelector('.zcatalog__filter-blackout');
+    const filter__apply = document.querySelector('.zcatalog__filter-apply');
+    const filter__reset = document.querySelector('.zcatalog__filter-reset');
 
     if (filter_btn) {
         filter_btn.addEventListener('click', () => {
@@ -726,8 +726,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Выпадающий список в каталоге
 
-    const droplist_btn = document.querySelector('.catalog__droplist');
-    const catalog__dropdown = document.querySelector('.catalog__dropdown');
+    const droplist_btn = document.querySelector('.zcatalog__droplist');
+    const catalog__dropdown = document.querySelector('.zcatalog__dropdown');
 
     if (droplist_btn) {
         droplist_btn.addEventListener('click', () => {
@@ -736,8 +736,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    const dropdown_items = document.querySelectorAll('.catalog__dropdown-item');
-    const dropdown_item_current = document.querySelector('.catalog__droplist-current');
+    const dropdown_items = document.querySelectorAll('.zcatalog__dropdown-item');
+    const dropdown_item_current = document.querySelector('.zcatalog__droplist-current');
 
     if (dropdown_items != 0) {
         dropdown_items.forEach(btn => {
@@ -751,13 +751,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Кнопка добавить в корзину
 
-    const goods__btn = document.querySelectorAll('.goods__btn');
-    const goods__quantity = document.querySelector('.goods__quantity');
+    const goods__btn = document.querySelectorAll('.zgoods__btn');
+    const goods__quantity = document.querySelector('.zgoods__quantity');
 
     if (goods__btn.length != 0) {
         goods__btn.forEach(btn => {
             btn.addEventListener('click', (e) => {
-                let quantity = e.target.parentNode.querySelector('.goods__quantity');
+                let quantity = e.target.parentNode.querySelector('.zgoods__quantity');
                 quantity.classList.add('active');
                 e.target.classList.add('disable');
             });
@@ -766,8 +766,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Табы в каталоге
 
-    const tabCatLinks = document.querySelectorAll(".header__catalogNav-tablink");
-    const tabCatContents = document.querySelectorAll(".header__catalogContent");
+    const tabCatLinks = document.querySelectorAll(".zheader__catalogNav-tablink");
+    const tabCatContents = document.querySelectorAll(".zheader__catalogContent");
 
     window.addEventListener('resize', () => {
         if (window.innerWidth > 993) {
@@ -793,8 +793,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (document.getElementById("tabCat1")) {
                 document.getElementById("tabCat1").classList.add('active');
             }
-            if (document.querySelector('.header__catalogNav-tablink[data-cat-tab="tabCat1"]')) {
-                document.querySelector('.header__catalogNav-tablink[data-cat-tab="tabCat1"]').classList.add('active');
+            if (document.querySelector('.zheader__catalogNav-tablink[data-cat-tab="tabCat1"]')) {
+                document.querySelector('.zheader__catalogNav-tablink[data-cat-tab="tabCat1"]').classList.add('active');
             }
         } else {
             tabCatLinks.forEach((tabLink) => {
@@ -818,8 +818,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (document.getElementById("tabCat1")) {
                 document.getElementById("tabCat1").classList.remove('active');
             }
-            if (document.querySelector('.header__catalogNav-tablink[data-cat-tab="tabCat1"]')) {
-                document.querySelector('.header__catalogNav-tablink[data-cat-tab="tabCat1"]').classList.remove('active');
+            if (document.querySelector('.zheader__catalogNav-tablink[data-cat-tab="tabCat1"]')) {
+                document.querySelector('.zheader__catalogNav-tablink[data-cat-tab="tabCat1"]').classList.remove('active');
             }
         }
     });
@@ -847,8 +847,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (document.getElementById("tabCat1")) {
             document.getElementById("tabCat1").classList.add('active');
         }
-        if (document.querySelector('.header__catalogNav-tablink[data-cat-tab="tabCat1"]')) {
-            document.querySelector('.header__catalogNav-tablink[data-cat-tab="tabCat1"]').classList.add('active');
+        if (document.querySelector('.zheader__catalogNav-tablink[data-cat-tab="tabCat1"]')) {
+            document.querySelector('.zheader__catalogNav-tablink[data-cat-tab="tabCat1"]').classList.add('active');
         }
     } else {
         tabCatLinks.forEach((tabLink) => {              
@@ -872,10 +872,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Бургер меню
 
-    const burger_btn = document.querySelector('.header__burger-btn');
-    const burger_btn_close = document.querySelector('.header__burger-btnClose');
-    const catalog_mobile = document.querySelector('.header__catalog');
-    const catalogContent_back = document.querySelectorAll('.header__catalogContent-back');
+    const burger_btn = document.querySelector('.zheader__burger-btn');
+    const burger_btn_close = document.querySelector('.zheader__burger-btnClose');
+    const catalog_mobile = document.querySelector('.zheader__catalog');
+    const catalogContent_back = document.querySelectorAll('.zheader__catalogContent-back');
 
     const burger_click = () => {
         burger_btn.classList.toggle('active');
@@ -904,10 +904,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Табы на детальной
 
-    const tabSubLinks = document.querySelectorAll(".header__catalogSubNav-tablink");
-    const tabSubContents = document.querySelectorAll(".header__catalogSubContent");
+    const tabSubLinks = document.querySelectorAll(".zheader__catalogSubNav-tablink");
+    const tabSubContents = document.querySelectorAll(".zheader__catalogSubContent");
 
-    console.log(tabSubLinks);
+    // console.log(tabSubLinks);
 
     if (tabSubLinks) {
         tabSubLinks.forEach((tabLink) => {
